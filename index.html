@@ -4,217 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MrSolarGrid - Solar Installation Tanzania | Certified Engineers</title>
-<meta name="description" content="Tanzania's certified solar engineers. Factory-trained on Deye, Victron, Weco, TBB Chloride. Residential, commercial, and industrial solar installations.">
-<meta name="keywords" content="solar Tanzania, solar Geita, solar Mwanza, Deye inverter, Victron, solar installation Tanzania">
-<meta property="og:title" content="MrSolarGrid - Solar Experts Tanzania">
-<meta property="og:description" content="Certified solar engineers serving all of Tanzania.">
-<meta property="og:type" content="website">
+<meta name="description" content="Tanzania's certified solar engineers. Factory-trained on Deye, Victron, Weco, TBB Chloride.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;color:#111827;background:#fff;line-height:1.5}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#111827;background:#fff;line-height:1.5}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
-img{max-width:100%;display:block}
 input,select,textarea{font-family:inherit;font-size:1rem}
-
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
 @media(min-width:768px){.container{padding:0 2rem}}
 
-/* Top bar */
 .topbar{background:#1e3a8a;color:#fff;font-size:.75rem;padding:.5rem 0;display:none}
 @media(min-width:768px){.topbar{display:block}}
-.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.topbar-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 .topbar-left{display:flex;gap:1.5rem;flex-wrap:wrap}
-.topbar-item{display:flex;align-items:center;gap:.25rem}
-.lang-btn{display:flex;align-items:center;gap:.25rem;color:#fff;font-size:.75rem}
-.lang-btn:hover{color:#fde047}
 
-/* Nav */
-.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e5e7eb;transition:box-shadow .2s}
+.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e5e7eb}
 .nav.scrolled{box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
 .logo{display:flex;align-items:center;gap:.5rem;cursor:pointer}
-.logo-svg{width:2.5rem;height:2.5rem;flex-shrink:0}
-.logo-text{font-weight:700;font-size:1.125rem;line-height:1;color:#1e3a8a}
+.logo-svg{width:2.5rem;height:2.5rem}
+.logo-text{font-weight:700;font-size:1.125rem;color:#1e3a8a}
 .logo-sub{font-size:.5625rem;color:#16a34a;letter-spacing:.05em}
 .nav-links{display:none;gap:.25rem;align-items:center}
 @media(min-width:1024px){.nav-links{display:flex}}
-.nav-link{padding:.5rem .75rem;border-radius:.5rem;font-size:.875rem;font-weight:500;color:#374151;transition:all .2s}
+.nav-link{padding:.5rem .75rem;border-radius:.5rem;font-size:.875rem;font-weight:500;color:#374151}
 .nav-link:hover{background:#f3f4f6;color:#1e3a8a}
 .nav-link.active{background:#dbeafe;color:#1e3a8a}
-.nav-cta{background:#facc15;color:#111827;padding:.5rem 1rem;border-radius:.5rem;font-weight:700;font-size:.875rem;margin-left:.5rem;transition:background .2s}
+.nav-cta{background:#facc15;color:#111827;padding:.5rem 1rem;border-radius:.5rem;font-weight:700;font-size:.875rem;margin-left:.5rem}
 .nav-cta:hover{background:#eab308}
 .menu-btn{display:flex;padding:.5rem;border-radius:.5rem;color:#374151}
 @media(min-width:1024px){.menu-btn{display:none}}
-.menu-btn:hover{background:#f3f4f6}
 .mobile-menu{display:none;border-top:1px solid #e5e7eb;padding:.75rem 0;background:#fff}
 .mobile-menu.open{display:block}
-.mobile-link{display:block;padding:.625rem 1rem;border-radius:.5rem;font-weight:500;color:#374151;font-size:.9375rem}
+.mobile-link{display:block;padding:.625rem 1rem;border-radius:.5rem;font-weight:500;color:#374151;font-size:.9375rem;width:100%;text-align:left}
 .mobile-link:hover,.mobile-link.active{background:#dbeafe;color:#1e3a8a}
 
-/* Page */
 .page{display:none}
 .page.active{display:block}
 
-/* Hero */
-.hero{background:#0c4a6e;color:#fff;padding:3rem 0;position:relative;overflow:hidden}
+.hero{background:#0c4a6e;color:#fff;padding:3rem 0}
 @media(min-width:768px){.hero{padding:5rem 0}}
-.hero-grid{display:grid;gap:2rem;align-items:center;position:relative}
+.hero-grid{display:grid;gap:2rem;align-items:center}
 @media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr;gap:3rem}}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(250,204,21,.15);border:1px solid rgba(250,204,21,.3);color:#fde047;padding:.375rem .875rem;border-radius:9999px;font-size:.75rem;font-weight:600;margin-bottom:1rem}
 .hero h1{font-size:2rem;font-weight:800;line-height:1.1;margin-bottom:1rem}
 @media(min-width:768px){.hero h1{font-size:3rem}}
-@media(min-width:1024px){.hero h1{font-size:3.5rem}}
 .hero h1 .accent{color:#fde047}
 .hero-sub{font-size:1.0625rem;color:#cbd5e1;margin-bottom:1.5rem;max-width:36rem}
-@media(min-width:768px){.hero-sub{font-size:1.125rem}}
 .hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:.625rem;font-weight:600;font-size:.9375rem;transition:all .2s;cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:.625rem;font-weight:600;font-size:.9375rem;cursor:pointer;border:none}
 .btn-yellow{background:#facc15;color:#111827}
-.btn-yellow:hover{background:#eab308;transform:translateY(-1px)}
+.btn-yellow:hover{background:#eab308}
 .btn-green{background:#16a34a;color:#fff}
 .btn-green:hover{background:#15803d}
 .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3)}
-.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
 .btn-blue{background:#1d4ed8;color:#fff}
 .btn-blue:hover{background:#1e40af}
 .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:36rem}
 @media(min-width:640px){.hero-stats{grid-template-columns:repeat(4,1fr)}}
 .hero-stat{text-align:center;padding:.75rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:.625rem}
-.hero-stat-num{font-size:1.5rem;font-weight:800;color:#fde047;line-height:1}
-.hero-stat-label{font-size:.6875rem;color:#cbd5e1;margin-top:.25rem;text-transform:uppercase;letter-spacing:.05em}
-.hero-visual{display:none;position:relative}
-@media(min-width:1024px){.hero-visual{display:block}}
-.hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:1.5rem;backdrop-filter:blur(10px)}
+.hero-stat-num{font-size:1.5rem;font-weight:800;color:#fde047}
+.hero-stat-label{font-size:.6875rem;color:#cbd5e1;margin-top:.25rem;text-transform:uppercase}
 
-/* Sections */
 .section{padding:3rem 0}
 @media(min-width:768px){.section{padding:4rem 0}}
 .section-gray{background:#f9fafb}
-.section-dark{background:#0f172a;color:#fff}
 .section-header{text-align:center;max-width:42rem;margin:0 auto 2.5rem}
-.section-tag{display:inline-block;color:#1d4ed8;font-weight:700;font-size:.875rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.5rem}
-.section-title{font-size:1.75rem;font-weight:800;margin-bottom:.75rem;line-height:1.2}
+.section-tag{display:inline-block;color:#1d4ed8;font-weight:700;font-size:.875rem;text-transform:uppercase;margin-bottom:.5rem}
+.section-title{font-size:1.75rem;font-weight:800;margin-bottom:.75rem}
 @media(min-width:768px){.section-title{font-size:2.25rem}}
 .section-sub{color:#6b7280;font-size:1rem}
-@media(min-width:768px){.section-sub{font-size:1.125rem}}
 
-/* Cards */
 .card-grid{display:grid;gap:1.25rem}
 .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:.875rem;padding:1.5rem;transition:all .2s}
-.card:hover{border-color:#93c5fd;box-shadow:0 4px 12px rgba(0,0,0,.06);transform:translateY(-2px)}
-.card-icon{width:3rem;height:3rem;border-radius:.625rem;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff}
-.bg-blue{background:#1d4ed8}
-.bg-green{background:#16a34a}
-.bg-yellow{background:#eab308}
-.bg-orange{background:#ea580c}
-.bg-purple{background:#7c3aed}
-.bg-cyan{background:#0891b2}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:.875rem;padding:1.5rem}
+.card:hover{border-color:#93c5fd;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card-icon{width:3rem;height:3rem;border-radius:.625rem;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.5rem}
+.bg-blue{background:#1d4ed8}.bg-green{background:#16a34a}.bg-yellow{background:#eab308}.bg-orange{background:#ea580c}.bg-purple{background:#7c3aed}.bg-cyan{background:#0891b2}
 .card-title{font-size:1.125rem;font-weight:700;margin-bottom:.5rem}
-.card-desc{color:#6b7280;font-size:.9375rem;margin-bottom:.75rem}
-.card-list{list-style:none}
-.card-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.875rem;color:#374151;margin-bottom:.375rem}
-.card-list li::before{content:'✓';color:#16a34a;font-weight:700;flex-shrink:0}
+.card-desc{color:#6b7280;font-size:.9375rem}
 
-/* Service cards */
-.service-card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;cursor:pointer;transition:all .2s;text-align:left}
-.service-card:hover{border-color:#1d4ed8;box-shadow:0 8px 20px rgba(29,78,216,.1)}
-.service-card.active{border-color:#1d4ed8;background:#eff6ff}
-
-/* CTAs */
 .cta-section{background:#facc15;padding:3rem 0;color:#111827}
 .cta-inner{max-width:48rem;margin:0 auto;text-align:center}
 .cta-title{font-size:1.75rem;font-weight:800;margin-bottom:.75rem}
-@media(min-width:768px){.cta-title{font-size:2.25rem}}
-.cta-sub{font-size:1.0625rem;margin-bottom:1.5rem;opacity:.9}
+.cta-sub{font-size:1.0625rem;margin-bottom:1.5rem}
 
-/* Process */
 .process-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .process-card{position:relative;background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;padding:1.25rem}
 .process-num{position:absolute;top:-.75rem;left:1rem;background:#1d4ed8;color:#fff;width:2rem;height:2rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-size:.875rem;font-weight:700}
 .process-title{font-weight:700;margin-bottom:.375rem;margin-top:.25rem}
 .process-desc{font-size:.875rem;color:#6b7280}
 
-/* Footer */
-.footer{background:#0f172a;color:#cbd5e1;padding:3rem 0 1.5rem}
-.footer-grid{display:grid;gap:2rem;margin-bottom:2rem}
-@media(min-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
-.footer h4{color:#fff;font-weight:700;margin-bottom:.875rem;font-size:.9375rem}
-.footer-links{display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
-.footer-links a:hover{color:#fde047}
-.footer-bottom{border-top:1px solid #1e293b;padding-top:1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;font-size:.8125rem}
-.social-row{display:flex;gap:.5rem;margin-top:.75rem}
-.social-link{width:2rem;height:2rem;background:#1e293b;border-radius:.5rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.social-link:hover{background:#1d4ed8}
-
-/* WhatsApp float */
-.wa-float{position:fixed;bottom:1.25rem;right:1.25rem;z-index:9999;width:3.5rem;height:3.5rem;background:#25d366;color:#fff;border-radius:9999px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none;cursor:pointer}
-.wa-float:hover{transform:scale(1.1);background:#1da851}
-.wa-float svg{display:block;pointer-events:none}
-
-/* Forms */
-.form-group{margin-bottom:1rem}
-.form-label{display:block;font-weight:600;font-size:.875rem;margin-bottom:.375rem;color:#374151}
-.form-label .req{color:#dc2626}
-.form-input,.form-select,.form-textarea{width:100%;padding:.625rem .875rem;border:1px solid #d1d5db;border-radius:.5rem;font-size:.9375rem;transition:border-color .2s,box-shadow .2s;background:#fff}
-.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.1)}
-.form-textarea{resize:vertical;min-height:100px}
-.form-row{display:grid;gap:1rem}
-@media(min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
-.form-help{font-size:.75rem;color:#6b7280;margin-top:.25rem}
-
-/* Quote stepper */
-.stepper{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;gap:.5rem}
-.step-dot{flex:1;height:.5rem;border-radius:9999px;background:#e5e7eb;transition:background .3s}
-.step-dot.done{background:#16a34a}
-.step-dot.active{background:#1d4ed8}
-.step-label{font-size:.75rem;color:#6b7280;text-align:center;margin-top:.5rem}
-.quote-step{display:none}
-.quote-step.active{display:block}
-.option-grid{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-.option-card{padding:1rem;border:2px solid #e5e7eb;border-radius:.75rem;cursor:pointer;text-align:center;transition:all .2s;background:#fff}
-.option-card:hover{border-color:#93c5fd}
-.option-card.selected{border-color:#1d4ed8;background:#eff6ff}
-.option-icon{font-size:1.5rem;margin-bottom:.5rem}
-.option-title{font-weight:700;font-size:.9375rem;margin-bottom:.25rem}
-.option-desc{font-size:.75rem;color:#6b7280}
-
-/* Quote nav */
-.quote-nav{display:flex;justify-content:space-between;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb}
-.btn-back{background:#f3f4f6;color:#374151;padding:.625rem 1rem;border-radius:.5rem;font-weight:600;font-size:.875rem}
-.btn-back:disabled{opacity:.4;cursor:not-allowed}
-.btn-next{background:#1d4ed8;color:#fff;padding:.625rem 1.25rem;border-radius:.5rem;font-weight:600;font-size:.875rem}
-.btn-next:disabled{background:#d1d5db;cursor:not-allowed}
-.btn-submit{background:#16a34a;color:#fff;padding:.625rem 1.5rem;border-radius:.5rem;font-weight:700;font-size:.875rem}
-.btn-submit:disabled{background:#d1d5db;cursor:not-allowed}
-
-/* Success */
-.success-card{background:#f0fdf4;border:2px solid #86efac;border-radius:1rem;padding:2rem;text-align:center}
-.success-icon{width:4rem;height:4rem;background:#16a34a;color:#fff;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:2rem}
-.success-card h2{font-size:1.5rem;margin-bottom:.5rem}
-.success-card p{color:#374151;margin-bottom:1rem}
-
-/* About */
 .about-hero{padding:3rem 0;background:#0c4a6e;color:#fff}
 .cert-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.cert-card{background:#fff;border:2px solid #e5e7eb;border-radius:.875rem;padding:1.5rem;text-align:center;transition:all .2s}
-.cert-card:hover{border-color:#1d4ed8;transform:translateY(-2px)}
+.cert-card{background:#fff;border:2px solid #e5e7eb;border-radius:.875rem;padding:1.5rem;text-align:center}
 .cert-logo{width:3.5rem;height:3.5rem;background:#dbeafe;border-radius:.625rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:#1d4ed8;font-weight:800}
 .cert-name{font-weight:700;margin-bottom:.25rem}
 .cert-type{font-size:.8125rem;color:#6b7280;margin-bottom:.5rem}
 .cert-badge{display:inline-flex;align-items:center;gap:.25rem;background:#dcfce7;color:#15803d;padding:.25rem .625rem;border-radius:9999px;font-size:.6875rem;font-weight:700}
 
-/* FAQ */
-.faq-cats{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:2rem;scrollbar-width:thin}
-.faq-cat{padding:.5rem 1rem;border-radius:9999px;font-size:.875rem;font-weight:600;background:#f3f4f6;color:#374151;white-space:nowrap;flex-shrink:0;transition:all .2s}
-.faq-cat:hover{background:#e5e7eb}
+.svc-tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:1.5rem}
+.svc-tab{padding:.5rem 1rem;border-radius:.5rem;font-size:.875rem;font-weight:600;background:#fff;border:1px solid #e5e7eb;white-space:nowrap;color:#374151}
+.svc-tab.active{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.svc-content{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem}
+@media(min-width:768px){.svc-content{padding:2rem}}
+.svc-overview{font-size:1.0625rem;color:#374151;margin-bottom:1.5rem;line-height:1.6}
+
+.project-card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;overflow:hidden}
+.project-header{height:140px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.125rem}
+.project-body{padding:1.25rem}
+.project-title{font-weight:700;margin-bottom:.5rem}
+.project-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+.tag{font-size:.6875rem;background:#f3f4f6;color:#374151;padding:.25rem .5rem;border-radius:.375rem;font-weight:600}
+
+.faq-cats{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:2rem}
+.faq-cat{padding:.5rem 1rem;border-radius:9999px;font-size:.875rem;font-weight:600;background:#f3f4f6;color:#374151;white-space:nowrap}
 .faq-cat.active{background:#1d4ed8;color:#fff}
-.faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;margin-bottom:.75rem;overflow:hidden;transition:all .2s}
+.faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;margin-bottom:.75rem;overflow:hidden}
 .faq-item.open{border-color:#1d4ed8}
 .faq-q{width:100%;padding:1rem 1.25rem;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:600;font-size:.9375rem}
 .faq-q:hover{background:#f9fafb}
@@ -223,115 +133,131 @@ input,select,textarea{font-family:inherit;font-size:1rem}
 .faq-a{padding:0 1.25rem;max-height:0;overflow:hidden;transition:all .3s ease;color:#4b5563;font-size:.9375rem;line-height:1.6}
 .faq-item.open .faq-a{padding:0 1.25rem 1.25rem;max-height:600px}
 
-/* Dashboard */
-.demo-banner{background:#fef3c7;border:1px solid #fbbf24;color:#92400e;padding:.75rem 1rem;border-radius:.625rem;text-align:center;font-size:.875rem;font-weight:600;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.demo-banner{background:#fef3c7;border:1px solid #fbbf24;color:#92400e;padding:.75rem 1rem;border-radius:.625rem;text-align:center;font-size:.875rem;font-weight:600;margin-bottom:1.5rem}
 .dash-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:1.5rem}
 .dash-stat{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;padding:1.25rem}
-.dash-stat-label{font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+.dash-stat-label{font-size:.75rem;color:#6b7280;text-transform:uppercase;margin-bottom:.5rem}
 .dash-stat-val{font-size:1.875rem;font-weight:800;line-height:1;margin-bottom:.25rem}
 .dash-stat-unit{font-size:.875rem;color:#6b7280}
 .dash-flow{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;margin-bottom:1.5rem;text-align:center}
-.flow-svg{max-width:100%;height:auto}
 .dash-chart{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem}
 .chart-tabs{display:flex;gap:.25rem;background:#f3f4f6;border-radius:.5rem;padding:.25rem;margin-bottom:1.25rem;width:fit-content}
-.chart-tab{padding:.375rem .75rem;border-radius:.375rem;font-size:.8125rem;font-weight:600;color:#6b7280;text-transform:capitalize}
+.chart-tab{padding:.375rem .75rem;border-radius:.375rem;font-size:.8125rem;font-weight:600;color:#6b7280}
 .chart-tab.active{background:#1d4ed8;color:#fff}
 .chart-bars{display:flex;align-items:flex-end;gap:.25rem;height:10rem}
 .chart-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:.25rem;justify-content:flex-end;height:100%}
-.chart-bar{width:100%;background:#facc15;border-radius:.25rem .25rem 0 0;transition:height .5s;min-height:2px}
+.chart-bar{width:100%;background:#facc15;border-radius:.25rem .25rem 0 0;min-height:2px}
 .chart-label{font-size:.625rem;color:#6b7280;font-family:monospace}
 
-/* Contact */
 .contact-grid{display:grid;gap:1.5rem;margin-bottom:2rem}
 @media(min-width:768px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
-.contact-card{background:#fff;border:1px solid #e5e7eb;border-radius:.875rem;padding:1.5rem;text-align:center;transition:all .2s}
-.contact-card:hover{border-color:#1d4ed8;transform:translateY(-2px)}
-.contact-icon{width:3rem;height:3rem;border-radius:9999px;background:#dbeafe;color:#1d4ed8;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.contact-card{background:#fff;border:1px solid #e5e7eb;border-radius:.875rem;padding:1.5rem;text-align:center}
+.contact-icon{width:3rem;height:3rem;border-radius:9999px;background:#dbeafe;color:#1d4ed8;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem}
 .contact-grid-2{display:grid;gap:1.5rem}
 @media(min-width:1024px){.contact-grid-2{grid-template-columns:1fr 1fr}}
 
-/* Project cards */
-.project-card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;overflow:hidden;transition:all .2s}
-.project-card:hover{box-shadow:0 8px 20px rgba(0,0,0,.08);transform:translateY(-2px)}
-.project-header{height:140px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.125rem}
-.project-body{padding:1.25rem}
-.project-title{font-weight:700;margin-bottom:.5rem}
-.project-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
-.tag{font-size:.6875rem;background:#f3f4f6;color:#374151;padding:.25rem .5rem;border-radius:.375rem;font-weight:600}
+.form-group{margin-bottom:1rem}
+.form-label{display:block;font-weight:600;font-size:.875rem;margin-bottom:.375rem;color:#374151}
+.form-label .req{color:#dc2626}
+.form-input,.form-select,.form-textarea{width:100%;padding:.625rem .875rem;border:1px solid #d1d5db;border-radius:.5rem;font-size:.9375rem;background:#fff}
+.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.1)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;gap:1rem}
+@media(min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
+.form-help{font-size:.75rem;color:#6b7280;margin-top:.25rem}
 
-/* Services tabs */
-.svc-tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:1.5rem}
-.svc-tab{padding:.5rem 1rem;border-radius:.5rem;font-size:.875rem;font-weight:600;background:#fff;border:1px solid #e5e7eb;white-space:nowrap;flex-shrink:0;color:#374151}
-.svc-tab.active{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
-.svc-content{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem}
-@media(min-width:768px){.svc-content{padding:2rem}}
-.svc-overview{font-size:1.0625rem;color:#374151;margin-bottom:1.5rem;line-height:1.6}
+.stepper{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
+.step-dot{flex:1;height:.5rem;border-radius:9999px;background:#e5e7eb}
+.step-dot.done{background:#16a34a}
+.step-dot.active{background:#1d4ed8}
+.step-label{font-size:.75rem;color:#6b7280;text-align:center;margin-bottom:1.5rem}
+.quote-step{display:none}
+.quote-step.active{display:block}
+.option-grid{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.option-card{padding:1rem;border:2px solid #e5e7eb;border-radius:.75rem;cursor:pointer;text-align:center;background:#fff}
+.option-card:hover{border-color:#93c5fd}
+.option-card.selected{border-color:#1d4ed8;background:#eff6ff}
+.option-icon{font-size:1.5rem;margin-bottom:.5rem}
+.option-title{font-weight:700;font-size:.9375rem;margin-bottom:.25rem}
+.option-desc{font-size:.75rem;color:#6b7280}
 
-/* Loading state */
-.btn-loading{position:relative;color:transparent !important}
-.btn-loading::after{content:'';position:absolute;width:1rem;height:1rem;top:50%;left:50%;margin:-.5rem 0 0 -.5rem;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:spin .6s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+.quote-nav{display:flex;justify-content:space-between;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb}
+.btn-back{background:#f3f4f6;color:#374151;padding:.625rem 1rem;border-radius:.5rem;font-weight:600;font-size:.875rem;cursor:pointer;border:none}
+.btn-back:disabled{opacity:.4;cursor:not-allowed}
+.btn-next{background:#1d4ed8;color:#fff;padding:.625rem 1.25rem;border-radius:.5rem;font-weight:600;font-size:.875rem;cursor:pointer;border:none}
+.btn-next:disabled{background:#d1d5db;cursor:not-allowed}
+.btn-submit{background:#16a34a;color:#fff;padding:.625rem 1.5rem;border-radius:.5rem;font-weight:700;font-size:.875rem;cursor:pointer;border:none}
+.btn-submit:disabled{background:#d1d5db;cursor:not-allowed}
 
-/* Utilities */
-.text-center{text-align:center}
-.mb-1{margin-bottom:.5rem}
-.mb-2{margin-bottom:1rem}
-.mb-3{margin-bottom:1.5rem}
-.flex{display:flex}
-.gap-1{gap:.5rem}
-.gap-2{gap:1rem}
-.items-center{align-items:center}
-.justify-center{justify-content:center}
-.flex-wrap{flex-wrap:wrap}
-.hidden{display:none !important}
+.success-card{background:#f0fdf4;border:2px solid #86efac;border-radius:1rem;padding:2rem;text-align:center}
+.success-icon{width:4rem;height:4rem;background:#16a34a;color:#fff;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:2rem}
+.success-card h2{font-size:1.5rem;margin-bottom:.5rem}
+.success-card p{color:#374151;margin-bottom:1rem}
 
-/* Calculator */
 .calc-wrap{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;max-width:900px;margin:0 auto}
 @media(min-width:768px){.calc-wrap{padding:2rem}}
 .calc-grid{display:grid;gap:2rem}
 @media(min-width:1024px){.calc-grid{grid-template-columns:1fr 1fr}}
 .calc-input-group{margin-bottom:1.25rem}
-.calc-label{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.875rem;margin-bottom:.5rem;color:#374151}
+.calc-label{display:flex;justify-content:space-between;font-weight:600;font-size:.875rem;margin-bottom:.5rem;color:#374151}
 .calc-value{color:#1d4ed8;font-weight:700;font-size:1rem}
 .calc-slider{width:100%;height:.5rem;border-radius:.25rem;background:#e5e7eb;outline:none;-webkit-appearance:none;appearance:none}
-.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:1.25rem;height:1.25rem;border-radius:9999px;background:#1d4ed8;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;border-radius:9999px;background:#1d4ed8;cursor:pointer}
 .calc-slider::-moz-range-thumb{width:1.25rem;height:1.25rem;border-radius:9999px;background:#1d4ed8;cursor:pointer;border:none}
 .calc-results{background:#eff6ff;border-radius:.875rem;padding:1.5rem}
-.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid rgba(29,78,216,.15)}
+.calc-result-row{display:flex;justify-content:space-between;padding:.75rem 0;border-bottom:1px solid rgba(29,78,216,.15)}
 .calc-result-row:last-child{border-bottom:none}
-.calc-result-label{font-size:.875rem;color:#374151;font-weight:500}
+.calc-result-label{font-size:.875rem;color:#374151}
 .calc-result-value{font-weight:800;font-size:1.125rem;color:#1e3a8a}
 .calc-result-value.green{color:#16a34a}
 .calc-result-highlight{background:#16a34a;color:#fff;border-radius:.625rem;padding:1rem;text-align:center;margin-top:1rem}
-.calc-result-highlight-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;opacity:.9}
-.calc-result-highlight-value{font-size:1.875rem;font-weight:800;line-height:1;margin-top:.25rem}
+.calc-result-highlight-label{font-size:.75rem;text-transform:uppercase;opacity:.9}
+.calc-result-highlight-value{font-size:1.875rem;font-weight:800;margin-top:.25rem}
 .calc-disclaimer{background:#fffbeb;border:1px solid #fbbf24;color:#92400e;padding:.75rem 1rem;border-radius:.5rem;font-size:.8125rem;margin-top:1.25rem;line-height:1.5}
 
-/* Legal page */
 .legal-content{max-width:780px;margin:0 auto;padding:2rem 0}
 .legal-content h1{font-size:2rem;font-weight:800;margin-bottom:.5rem}
 .legal-content .updated{color:#6b7280;font-size:.875rem;margin-bottom:2rem}
 .legal-content h2{font-size:1.25rem;font-weight:700;margin:2rem 0 .75rem;color:#1e3a8a}
-.legal-content h3{font-size:1rem;font-weight:700;margin:1.25rem 0 .5rem}
 .legal-content p,.legal-content li{color:#374151;line-height:1.7;margin-bottom:.75rem;font-size:.9375rem}
-.legal-content ul{padding-left:1.5rem;margin-bottom:1rem}
+.legal-content ul{padding-left:1.5rem}
 .legal-content a{color:#1d4ed8;text-decoration:underline}
+
+.footer{background:#0f172a;color:#cbd5e1;padding:3rem 0 1.5rem}
+.footer-grid{display:grid;gap:2rem;margin-bottom:2rem}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.footer h4{color:#fff;font-weight:700;margin-bottom:.875rem;font-size:.9375rem}
+.footer-links{display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
+.footer-links a{cursor:pointer}
+.footer-links a:hover{color:#fde047}
+.footer-bottom{border-top:1px solid #1e293b;padding-top:1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;font-size:.8125rem}
+.footer-bottom a{cursor:pointer}
+
+.wa-float{position:fixed;bottom:1.25rem;right:1.25rem;z-index:9999;width:3.5rem;height:3.5rem;background:#25d366;color:#fff;border-radius:9999px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,.4)}
+.wa-float:hover{transform:scale(1.1);background:#1da851}
+.wa-float svg{pointer-events:none}
+
+.btn-loading{position:relative;color:transparent !important}
+.btn-loading::after{content:'';position:absolute;width:1rem;height:1rem;top:50%;left:50%;margin:-.5rem 0 0 -.5rem;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hidden{display:none !important}
+.text-center{text-align:center}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-left">
-      <span class="topbar-item">📞 +255 782 435 626</span>
-      <span class="topbar-item">✉️ energies@mrsolargrid.com</span>
-      <span class="topbar-item">📍 Magogo Street, Geita</span>
+      <span>📞 +255 782 435 626</span>
+      <span>✉️ energies@mrsolargrid.com</span>
+      <span>📍 Magogo Street, Geita</span>
     </div>
   </div>
 </div>
 
-<!-- NAV -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
     <div class="logo" onclick="goto('home')">
@@ -339,7 +265,7 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <ellipse cx="50" cy="50" rx="45" ry="30" fill="none" stroke="#22c55e" stroke-width="4" transform="rotate(-15 50 50)"/>
         <circle cx="65" cy="35" r="8" fill="#fbbf24"/>
         <path d="M20 70 L50 40 L80 70 L80 80 L20 80 Z" fill="#1e3a8a"/>
-        <rect x="35" y="50" width="35" height="25" fill="#3b82f6" stroke="white" stroke-width="1"/>
+        <rect x="35" y="50" width="35" height="25" fill="#3b82f6"/>
       </svg>
       <div>
         <div class="logo-text">MrSolarGrid</div>
@@ -357,26 +283,25 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       <button class="nav-link" data-page="contact" onclick="goto('contact')">Contact</button>
       <button class="nav-cta" onclick="goto('quote')">Get Quote</button>
     </div>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+    <button class="menu-btn" onclick="toggleMenu()">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <div class="container">
-      <button class="mobile-link" data-page="home" onclick="goto('home')">Home</button>
-      <button class="mobile-link" data-page="about" onclick="goto('about')">About</button>
-      <button class="mobile-link" data-page="services" onclick="goto('services')">Services</button>
-      <button class="mobile-link" data-page="calculator" onclick="goto('calculator')">Savings Calculator</button>
-      <button class="mobile-link" data-page="projects" onclick="goto('projects')">Projects</button>
-      <button class="mobile-link" data-page="faq" onclick="goto('faq')">FAQ</button>
-      <button class="mobile-link" data-page="dashboard" onclick="goto('dashboard')">Live Demo</button>
-      <button class="mobile-link" data-page="contact" onclick="goto('contact')">Contact</button>
-      <button class="mobile-link" data-page="quote" onclick="goto('quote')" style="background:#facc15;color:#111827;font-weight:700;text-align:center;margin-top:.5rem">Get Quote</button>
+      <button class="mobile-link" onclick="goto('home')">Home</button>
+      <button class="mobile-link" onclick="goto('about')">About</button>
+      <button class="mobile-link" onclick="goto('services')">Services</button>
+      <button class="mobile-link" onclick="goto('calculator')">Savings Calculator</button>
+      <button class="mobile-link" onclick="goto('projects')">Projects</button>
+      <button class="mobile-link" onclick="goto('faq')">FAQ</button>
+      <button class="mobile-link" onclick="goto('dashboard')">Live Demo</button>
+      <button class="mobile-link" onclick="goto('contact')">Contact</button>
+      <button class="mobile-link" onclick="goto('quote')" style="background:#facc15;color:#111827;font-weight:700;text-align:center;margin-top:.5rem">Get Quote</button>
     </div>
   </div>
 </nav>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero">
     <div class="container hero-grid">
@@ -387,7 +312,7 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <div class="hero-ctas">
           <button class="btn btn-yellow" onclick="goto('quote')">Get Free Quote →</button>
           <button class="btn btn-green" onclick="goto('calculator')">💰 Calculate Savings</button>
-          <a class="btn btn-outline" href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27m%20interested%20in%20learning%20more%20about%20solar%20for%20my%20property.">💬 WhatsApp</a>
+          <a class="btn btn-outline" href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27m%20interested%20in%20learning%20more%20about%20solar.">💬 WhatsApp</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat"><div class="hero-stat-num">150+</div><div class="hero-stat-label">Projects</div></div>
@@ -396,39 +321,8 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           <div class="hero-stat"><div class="hero-stat-num">5+</div><div class="hero-stat-label">Years</div></div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
-            <div style="font-weight:700;color:#fff">Live System Status</div>
-            <div style="display:flex;align-items:center;gap:.375rem;color:#86efac;font-size:.75rem">
-              <span style="width:.5rem;height:.5rem;background:#22c55e;border-radius:9999px;display:inline-block"></span>Online
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-            <div style="background:rgba(250,204,21,.1);border:1px solid rgba(250,204,21,.3);border-radius:.5rem;padding:.875rem">
-              <div style="color:#cbd5e1;font-size:.6875rem;text-transform:uppercase">Producing</div>
-              <div style="color:#fde047;font-size:1.5rem;font-weight:800">5.2 kW</div>
-            </div>
-            <div style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:.5rem;padding:.875rem">
-              <div style="color:#cbd5e1;font-size:.6875rem;text-transform:uppercase">Battery</div>
-              <div style="color:#86efac;font-size:1.5rem;font-weight:800">87%</div>
-            </div>
-            <div style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);border-radius:.5rem;padding:.875rem">
-              <div style="color:#cbd5e1;font-size:.6875rem;text-transform:uppercase">Today</div>
-              <div style="color:#93c5fd;font-size:1.5rem;font-weight:800">28 kWh</div>
-            </div>
-            <div style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:.5rem;padding:.875rem">
-              <div style="color:#cbd5e1;font-size:.6875rem;text-transform:uppercase">Saved</div>
-              <div style="color:#86efac;font-size:1.5rem;font-weight:800">12,400</div>
-              <div style="color:#cbd5e1;font-size:.625rem">TZS today</div>
-            </div>
-          </div>
-          <button onclick="goto('dashboard')" style="margin-top:1rem;width:100%;padding:.625rem;background:#1d4ed8;color:#fff;border-radius:.5rem;font-weight:600;font-size:.875rem">View Live Demo →</button>
-        </div>
-      </div>
     </div>
   </section>
-
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -437,40 +331,15 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <p class="section-sub">From residential rooftops to industrial-scale installations</p>
       </div>
       <div class="card-grid card-grid-3">
-        <div class="card" onclick="gotoService('solar-installation')" style="cursor:pointer">
-          <div class="card-icon bg-yellow">☀️</div>
-          <div class="card-title">Solar Installation</div>
-          <div class="card-desc">Custom-designed PV systems for homes, businesses, and industries.</div>
-        </div>
-        <div class="card" onclick="gotoService('battery-systems')" style="cursor:pointer">
-          <div class="card-icon bg-green">🔋</div>
-          <div class="card-title">Battery Systems</div>
-          <div class="card-desc">Lithium and Weco battery solutions for reliable backup.</div>
-        </div>
-        <div class="card" onclick="gotoService('energy-audits')" style="cursor:pointer">
-          <div class="card-icon bg-blue">📊</div>
-          <div class="card-title">Energy Audits</div>
-          <div class="card-desc">Detailed analysis to optimize your energy consumption.</div>
-        </div>
-        <div class="card" onclick="gotoService('monitoring')" style="cursor:pointer">
-          <div class="card-icon bg-purple">📡</div>
-          <div class="card-title">Remote Monitoring</div>
-          <div class="card-desc">24/7 system monitoring with predictive maintenance.</div>
-        </div>
-        <div class="card" onclick="gotoService('streetlights')" style="cursor:pointer">
-          <div class="card-icon bg-orange">💡</div>
-          <div class="card-title">Solar Streetlights</div>
-          <div class="card-desc">Standalone solar lighting for streets, estates, and facilities.</div>
-        </div>
-        <div class="card" onclick="gotoService('water-heating')" style="cursor:pointer">
-          <div class="card-icon bg-cyan">🚿</div>
-          <div class="card-title">Solar Water Heating</div>
-          <div class="card-desc">Solar thermal and heat pumps for hot water needs.</div>
-        </div>
+        <div class="card" onclick="gotoService('solar-installation')" style="cursor:pointer"><div class="card-icon bg-yellow">☀️</div><div class="card-title">Solar Installation</div><div class="card-desc">Custom-designed PV systems for homes, businesses, and industries.</div></div>
+        <div class="card" onclick="gotoService('battery-systems')" style="cursor:pointer"><div class="card-icon bg-green">🔋</div><div class="card-title">Battery Systems</div><div class="card-desc">Lithium and Weco battery solutions for reliable backup.</div></div>
+        <div class="card" onclick="gotoService('energy-audits')" style="cursor:pointer"><div class="card-icon bg-blue">📊</div><div class="card-title">Energy Audits</div><div class="card-desc">Detailed analysis to optimize your energy consumption.</div></div>
+        <div class="card" onclick="gotoService('monitoring')" style="cursor:pointer"><div class="card-icon bg-purple">📡</div><div class="card-title">Remote Monitoring</div><div class="card-desc">24/7 system monitoring with predictive maintenance.</div></div>
+        <div class="card" onclick="gotoService('streetlights')" style="cursor:pointer"><div class="card-icon bg-orange">💡</div><div class="card-title">Solar Streetlights</div><div class="card-desc">Standalone solar lighting for streets, estates, and facilities.</div></div>
+        <div class="card" onclick="gotoService('water-heating')" style="cursor:pointer"><div class="card-icon bg-cyan">🚿</div><div class="card-title">Solar Water Heating</div><div class="card-desc">Solar thermal and heat pumps for hot water needs.</div></div>
       </div>
     </div>
   </section>
-
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
@@ -485,12 +354,11 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       </div>
     </div>
   </section>
-
   <section class="cta-section">
     <div class="container cta-inner">
       <h2 class="cta-title">Ready to Cut Your Energy Bill?</h2>
       <p class="cta-sub">Get a free, no-obligation quote tailored to your property and usage.</p>
-      <div class="hero-ctas" style="justify-content:center">
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center">
         <button class="btn btn-blue" onclick="goto('quote')">Get Free Quote →</button>
         <a class="btn" style="background:#fff;color:#111827" href="tel:+255782435626">📞 Call Now</a>
       </div>
@@ -498,7 +366,6 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   </section>
 </div>
 
-<!-- ABOUT -->
 <div class="page" id="page-about">
   <section class="about-hero">
     <div class="container">
@@ -507,7 +374,6 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       <p style="font-size:1.0625rem;max-width:42rem;color:#cbd5e1">Five years of solar engineering excellence — from Geita to Dar es Salaam, we've built our reputation on honest pricing, certified expertise, and systems that just work.</p>
     </div>
   </section>
-
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -516,34 +382,13 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <p class="section-sub">Documentation available on request</p>
       </div>
       <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-logo">DEYE</div>
-          <div class="cert-name">Deye Inverters</div>
-          <div class="cert-type">Hybrid & off-grid systems</div>
-          <div class="cert-badge">✓ Officially Certified</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-logo">VICT</div>
-          <div class="cert-name">Victron Energy</div>
-          <div class="cert-type">Marine & off-grid solutions</div>
-          <div class="cert-badge">✓ Officially Certified</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-logo">WECO</div>
-          <div class="cert-name">Weco Batteries</div>
-          <div class="cert-type">Lithium battery systems</div>
-          <div class="cert-badge">✓ Officially Certified</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-logo">TBB</div>
-          <div class="cert-name">TBB Chloride</div>
-          <div class="cert-type">Industrial battery systems</div>
-          <div class="cert-badge">✓ Officially Certified</div>
-        </div>
+        <div class="cert-card"><div class="cert-logo">DEYE</div><div class="cert-name">Deye Inverters</div><div class="cert-type">Hybrid & off-grid systems</div><div class="cert-badge">✓ Officially Certified</div></div>
+        <div class="cert-card"><div class="cert-logo">VICT</div><div class="cert-name">Victron Energy</div><div class="cert-type">Marine & off-grid solutions</div><div class="cert-badge">✓ Officially Certified</div></div>
+        <div class="cert-card"><div class="cert-logo">WECO</div><div class="cert-name">Weco Batteries</div><div class="cert-type">Lithium battery systems</div><div class="cert-badge">✓ Officially Certified</div></div>
+        <div class="cert-card"><div class="cert-logo">TBB</div><div class="cert-name">TBB Chloride</div><div class="cert-type">Industrial battery systems</div><div class="cert-badge">✓ Officially Certified</div></div>
       </div>
     </div>
   </section>
-
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
@@ -551,18 +396,17 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <h2 class="section-title">What Sets Us Apart</h2>
       </div>
       <div class="card-grid card-grid-3">
-        <div class="card"><div class="card-icon bg-blue">🏆</div><div class="card-title">Certified Engineers</div><div class="card-desc">Factory-trained on every brand we install. Engineering rigor, not just sales.</div></div>
-        <div class="card"><div class="card-icon bg-green">💰</div><div class="card-title">Honest Pricing</div><div class="card-desc">Transparent quotes with no hidden costs. We tell you what's actually needed.</div></div>
-        <div class="card"><div class="card-icon bg-yellow">🔧</div><div class="card-title">Quality Components</div><div class="card-desc">Only premium brands with manufacturer warranties. No grey-market gear.</div></div>
-        <div class="card"><div class="card-icon bg-purple">📍</div><div class="card-title">All-Tanzania Service</div><div class="card-desc">From Geita to Dar es Salaam, we serve every region with the same standard.</div></div>
-        <div class="card"><div class="card-icon bg-orange">⚡</div><div class="card-title">Fast Response</div><div class="card-desc">24-hour quote turnaround. Site visits within the week for serious enquiries.</div></div>
-        <div class="card"><div class="card-icon bg-cyan">🛡️</div><div class="card-title">Long-Term Support</div><div class="card-desc">We don't disappear after installation. Monitoring and maintenance for the system's life.</div></div>
+        <div class="card"><div class="card-icon bg-blue">🏆</div><div class="card-title">Certified Engineers</div><div class="card-desc">Factory-trained on every brand we install.</div></div>
+        <div class="card"><div class="card-icon bg-green">💰</div><div class="card-title">Honest Pricing</div><div class="card-desc">Transparent quotes with no hidden costs.</div></div>
+        <div class="card"><div class="card-icon bg-yellow">🔧</div><div class="card-title">Quality Components</div><div class="card-desc">Only premium brands with manufacturer warranties.</div></div>
+        <div class="card"><div class="card-icon bg-purple">📍</div><div class="card-title">All-Tanzania Service</div><div class="card-desc">From Geita to Dar es Salaam with same standard.</div></div>
+        <div class="card"><div class="card-icon bg-orange">⚡</div><div class="card-title">Fast Response</div><div class="card-desc">24-hour quote turnaround for serious enquiries.</div></div>
+        <div class="card"><div class="card-icon bg-cyan">🛡️</div><div class="card-title">Long-Term Support</div><div class="card-desc">We don't disappear after installation.</div></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- SERVICES -->
 <div class="page" id="page-services">
   <section class="section section-gray">
     <div class="container">
@@ -570,7 +414,7 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <div class="section-tag">Our Services</div>
         <h2 class="section-title">Complete Solar Solutions</h2>
       </div>
-      <div class="svc-tabs" id="svc-tabs">
+      <div class="svc-tabs">
         <button class="svc-tab active" data-svc="solar-installation" onclick="showService('solar-installation')">Solar Installation</button>
         <button class="svc-tab" data-svc="battery-systems" onclick="showService('battery-systems')">Battery Systems</button>
         <button class="svc-tab" data-svc="energy-audits" onclick="showService('energy-audits')">Energy Audits</button>
@@ -583,70 +427,6 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   </section>
 </div>
 
-<!-- PROJECTS -->
-<div class="page" id="page-projects">
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Our Work</div>
-        <h2 class="section-title">Featured Installations</h2>
-        <p class="section-sub">Real projects across Tanzania</p>
-      </div>
-      <div class="card-grid card-grid-3">
-        <div class="project-card">
-          <div class="project-header" style="background:#eab308">10kW Residential</div>
-          <div class="project-body">
-            <div class="project-title">Family Home — Mwanza</div>
-            <div class="card-desc">Hybrid solar with 15kWh battery backup. Eliminates 90% of grid dependence.</div>
-            <div class="project-meta"><span class="tag">Deye 10kW</span><span class="tag">Weco Battery</span><span class="tag">Mwanza</span></div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header" style="background:#1d4ed8">50kW Commercial</div>
-          <div class="project-body">
-            <div class="project-title">Office Complex — Dar es Salaam</div>
-            <div class="card-desc">Grid-tied commercial system with monitoring. ROI in 4 years.</div>
-            <div class="project-meta"><span class="tag">Victron</span><span class="tag">Grid-tied</span><span class="tag">Dar</span></div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header" style="background:#16a34a">200kW Industrial</div>
-          <div class="project-body">
-            <div class="project-title">Mining Operations — Geita</div>
-            <div class="card-desc">Off-grid industrial system with TBB Chloride battery bank.</div>
-            <div class="project-meta"><span class="tag">TBB Chloride</span><span class="tag">Off-grid</span><span class="tag">Geita</span></div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header" style="background:#7c3aed">Solar Streetlights</div>
-          <div class="project-body">
-            <div class="project-title">Estate Lighting — Arusha</div>
-            <div class="card-desc">120 all-in-one solar streetlights for residential estate.</div>
-            <div class="project-meta"><span class="tag">Streetlights</span><span class="tag">120 units</span><span class="tag">Arusha</span></div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header" style="background:#0891b2">Solar Water Heating</div>
-          <div class="project-body">
-            <div class="project-title">Hotel Installation — Zanzibar</div>
-            <div class="card-desc">Solar thermal + heat pump hybrid for 80-room hotel.</div>
-            <div class="project-meta"><span class="tag">Solar Thermal</span><span class="tag">Hospitality</span></div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header" style="background:#ea580c">Energy Audit</div>
-          <div class="project-body">
-            <div class="project-title">Manufacturing — Dodoma</div>
-            <div class="card-desc">Full audit identifying 35% reduction in energy costs.</div>
-            <div class="project-meta"><span class="tag">Audit</span><span class="tag">Manufacturing</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- CALCULATOR -->
 <div class="page" id="page-calculator">
   <section class="section section-gray">
     <div class="container">
@@ -659,19 +439,12 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <div class="calc-grid">
           <div>
             <div class="calc-input-group">
-              <div class="calc-label">
-                <span>Monthly TANESCO bill</span>
-                <span class="calc-value" id="calc-bill-display">300,000 TZS</span>
-              </div>
+              <div class="calc-label"><span>Monthly TANESCO bill</span><span class="calc-value" id="calc-bill-display">300,000 TZS</span></div>
               <input type="range" class="calc-slider" id="calc-bill" min="50000" max="5000000" step="50000" value="300000" oninput="updateCalc()">
-              <div style="display:flex;justify-content:space-between;font-size:.75rem;color:#6b7280;margin-top:.25rem">
-                <span>50K TZS</span><span>5M TZS</span>
-              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.75rem;color:#6b7280;margin-top:.25rem"><span>50K TZS</span><span>5M TZS</span></div>
             </div>
             <div class="calc-input-group">
-              <div class="calc-label">
-                <span>Property type</span>
-              </div>
+              <div class="calc-label"><span>Property type</span></div>
               <select class="form-select" id="calc-type" onchange="updateCalc()">
                 <option value="residential">Residential (home)</option>
                 <option value="commercial">Commercial (office, shop)</option>
@@ -679,9 +452,7 @@ input,select,textarea{font-family:inherit;font-size:1rem}
               </select>
             </div>
             <div class="calc-input-group">
-              <div class="calc-label">
-                <span>Backup needs</span>
-              </div>
+              <div class="calc-label"><span>Backup needs</span></div>
               <select class="form-select" id="calc-backup" onchange="updateCalc()">
                 <option value="none">No battery (grid-tied)</option>
                 <option value="essential" selected>Essential loads (4-6 hours)</option>
@@ -690,45 +461,22 @@ input,select,textarea{font-family:inherit;font-size:1rem}
               </select>
             </div>
             <div class="calc-input-group">
-              <div class="calc-label">
-                <span>Outages per week</span>
-                <span class="calc-value" id="calc-outages-display">3</span>
-              </div>
+              <div class="calc-label"><span>Outages per week</span><span class="calc-value" id="calc-outages-display">3</span></div>
               <input type="range" class="calc-slider" id="calc-outages" min="0" max="14" step="1" value="3" oninput="updateCalc()">
             </div>
           </div>
           <div>
             <div class="calc-results">
               <h3 style="font-weight:700;font-size:1.125rem;margin-bottom:1rem;color:#1e3a8a">Your Estimate</h3>
-              <div class="calc-result-row">
-                <span class="calc-result-label">Recommended size</span>
-                <span class="calc-result-value" id="calc-size">5 kW</span>
-              </div>
-              <div class="calc-result-row">
-                <span class="calc-result-label">Estimated system cost</span>
-                <span class="calc-result-value" id="calc-cost">15M TZS</span>
-              </div>
-              <div class="calc-result-row">
-                <span class="calc-result-label">Monthly savings</span>
-                <span class="calc-result-value green" id="calc-monthly">270K TZS</span>
-              </div>
-              <div class="calc-result-row">
-                <span class="calc-result-label">Payback period</span>
-                <span class="calc-result-value" id="calc-payback">4.6 years</span>
-              </div>
-              <div class="calc-result-row">
-                <span class="calc-result-label">25-year savings</span>
-                <span class="calc-result-value green" id="calc-lifetime">66M TZS</span>
-              </div>
-              <div class="calc-result-highlight">
-                <div class="calc-result-highlight-label">CO₂ avoided per year</div>
-                <div class="calc-result-highlight-value" id="calc-co2">3.2 tonnes</div>
-              </div>
+              <div class="calc-result-row"><span class="calc-result-label">Recommended size</span><span class="calc-result-value" id="calc-size">5 kW</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Estimated system cost</span><span class="calc-result-value" id="calc-cost">15M TZS</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Monthly savings</span><span class="calc-result-value green" id="calc-monthly">270K TZS</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Payback period</span><span class="calc-result-value" id="calc-payback">4.6 years</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">25-year savings</span><span class="calc-result-value green" id="calc-lifetime">66M TZS</span></div>
+              <div class="calc-result-highlight"><div class="calc-result-highlight-label">CO₂ avoided per year</div><div class="calc-result-highlight-value" id="calc-co2">3.2 tonnes</div></div>
             </div>
-            <div class="calc-disclaimer">
-              <strong>Estimate based on TANESCO tariffs.</strong> Calculations use TANESCO's published tariff bands (T1 general at 292 TZS/kWh, T2 industrial at 195 TZS/kWh) and average Tanzania solar conditions (5.5 peak sun hours daily). Actual figures depend on your specific roof, usage patterns, and component selection. Get a free site visit for a precise quote.
-            </div>
-            <button class="btn btn-blue" onclick="calcToQuote()" style="width:100%;justify-content:center;margin-top:1rem">Get Detailed Quote →</button>
+            <div class="calc-disclaimer"><strong>Estimate based on TANESCO tariffs.</strong> T1 general 292 TZS/kWh, T2 industrial 195 TZS/kWh, 5.5 peak sun hours daily. Get a free site visit for a precise quote.</div>
+            <button class="btn btn-blue" onclick="goto('quote')" style="width:100%;justify-content:center;margin-top:1rem">Get Detailed Quote →</button>
           </div>
         </div>
       </div>
@@ -736,7 +484,26 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   </section>
 </div>
 
-<!-- FAQ -->
+<div class="page" id="page-projects">
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Work</div>
+        <h2 class="section-title">Featured Installations</h2>
+        <p class="section-sub">Real projects across Tanzania</p>
+      </div>
+      <div class="card-grid card-grid-3">
+        <div class="project-card"><div class="project-header" style="background:#eab308">10kW Residential</div><div class="project-body"><div class="project-title">Family Home — Mwanza</div><div class="card-desc">Hybrid solar with 15kWh battery backup.</div><div class="project-meta"><span class="tag">Deye 10kW</span><span class="tag">Weco</span><span class="tag">Mwanza</span></div></div></div>
+        <div class="project-card"><div class="project-header" style="background:#1d4ed8">50kW Commercial</div><div class="project-body"><div class="project-title">Office Complex — Dar es Salaam</div><div class="card-desc">Grid-tied commercial system with monitoring.</div><div class="project-meta"><span class="tag">Victron</span><span class="tag">Grid-tied</span><span class="tag">Dar</span></div></div></div>
+        <div class="project-card"><div class="project-header" style="background:#16a34a">200kW Industrial</div><div class="project-body"><div class="project-title">Mining Operations — Geita</div><div class="card-desc">Off-grid industrial system with TBB Chloride.</div><div class="project-meta"><span class="tag">TBB</span><span class="tag">Off-grid</span><span class="tag">Geita</span></div></div></div>
+        <div class="project-card"><div class="project-header" style="background:#7c3aed">Solar Streetlights</div><div class="project-body"><div class="project-title">Estate Lighting — Arusha</div><div class="card-desc">120 all-in-one solar streetlights.</div><div class="project-meta"><span class="tag">Streetlights</span><span class="tag">120 units</span><span class="tag">Arusha</span></div></div></div>
+        <div class="project-card"><div class="project-header" style="background:#0891b2">Solar Water Heating</div><div class="project-body"><div class="project-title">Hotel Installation — Zanzibar</div><div class="card-desc">Solar thermal + heat pump for 80-room hotel.</div><div class="project-meta"><span class="tag">Solar Thermal</span><span class="tag">Hotel</span></div></div></div>
+        <div class="project-card"><div class="project-header" style="background:#ea580c">Energy Audit</div><div class="project-body"><div class="project-title">Manufacturing — Dodoma</div><div class="card-desc">Full audit identifying 35% reduction in costs.</div><div class="project-meta"><span class="tag">Audit</span><span class="tag">Manufacturing</span></div></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <div class="page" id="page-faq">
   <section class="section">
     <div class="container">
@@ -745,19 +512,18 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
       <div class="faq-cats" id="faq-cats">
-        <button class="faq-cat active" data-cat="all" onclick="filterFaq('all')">All</button>
-        <button class="faq-cat" data-cat="general" onclick="filterFaq('general')">General</button>
-        <button class="faq-cat" data-cat="cost" onclick="filterFaq('cost')">Cost & Savings</button>
-        <button class="faq-cat" data-cat="technical" onclick="filterFaq('technical')">Technical</button>
-        <button class="faq-cat" data-cat="install" onclick="filterFaq('install')">Installation</button>
-        <button class="faq-cat" data-cat="maintenance" onclick="filterFaq('maintenance')">Maintenance</button>
+        <button class="faq-cat active" onclick="filterFaq('all')">All</button>
+        <button class="faq-cat" onclick="filterFaq('general')">General</button>
+        <button class="faq-cat" onclick="filterFaq('cost')">Cost & Savings</button>
+        <button class="faq-cat" onclick="filterFaq('technical')">Technical</button>
+        <button class="faq-cat" onclick="filterFaq('install')">Installation</button>
+        <button class="faq-cat" onclick="filterFaq('maintenance')">Maintenance</button>
       </div>
       <div id="faq-list"></div>
     </div>
   </section>
 </div>
 
-<!-- DASHBOARD -->
 <div class="page" id="page-dashboard">
   <section class="section section-gray">
     <div class="container">
@@ -766,57 +532,30 @@ input,select,textarea{font-family:inherit;font-size:1rem}
         <h2 class="section-title">Real-Time Solar Dashboard</h2>
         <p class="section-sub">A preview of the monitoring dashboard available with every installation</p>
       </div>
-      <div class="demo-banner">
-        ⓘ Demo data shown. Real-time monitoring available on installed systems via Deye Cloud, Victron VRM, and our custom dashboard.
-      </div>
+      <div class="demo-banner">ⓘ Demo data shown. Real-time monitoring available on installed systems via Deye Cloud, Victron VRM, and our custom dashboard.</div>
       <div class="dash-grid">
-        <div class="dash-stat">
-          <div class="dash-stat-label">Producing Now</div>
-          <div class="dash-stat-val" style="color:#eab308" id="dash-producing">5.2</div>
-          <div class="dash-stat-unit">kW</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-label">Battery</div>
-          <div class="dash-stat-val" style="color:#16a34a" id="dash-battery">87</div>
-          <div class="dash-stat-unit">% charge</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-label">Today's Energy</div>
-          <div class="dash-stat-val" style="color:#1d4ed8" id="dash-today">28</div>
-          <div class="dash-stat-unit">kWh</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-label">Saved Today</div>
-          <div class="dash-stat-val" style="color:#16a34a">12,400</div>
-          <div class="dash-stat-unit">TZS</div>
-        </div>
+        <div class="dash-stat"><div class="dash-stat-label">Producing Now</div><div class="dash-stat-val" style="color:#eab308">5.2</div><div class="dash-stat-unit">kW</div></div>
+        <div class="dash-stat"><div class="dash-stat-label">Battery</div><div class="dash-stat-val" style="color:#16a34a">87</div><div class="dash-stat-unit">% charge</div></div>
+        <div class="dash-stat"><div class="dash-stat-label">Today's Energy</div><div class="dash-stat-val" style="color:#1d4ed8">28</div><div class="dash-stat-unit">kWh</div></div>
+        <div class="dash-stat"><div class="dash-stat-label">Saved Today</div><div class="dash-stat-val" style="color:#16a34a">12,400</div><div class="dash-stat-unit">TZS</div></div>
       </div>
       <div class="dash-flow">
         <div style="font-weight:700;margin-bottom:1rem">Live Energy Flow</div>
-        <svg class="flow-svg" viewBox="0 0 500 200" style="max-width:500px">
+        <svg viewBox="0 0 500 200" style="max-width:500px;width:100%">
           <circle cx="80" cy="60" r="30" fill="#fde047" stroke="#eab308" stroke-width="2"/>
           <text x="80" y="65" text-anchor="middle" font-size="11" font-weight="700">SUN</text>
           <rect x="50" y="120" width="60" height="40" fill="#1e3a8a" rx="4"/>
           <text x="80" y="145" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">PANELS</text>
           <rect x="220" y="80" width="60" height="80" fill="#1d4ed8" rx="4"/>
           <text x="250" y="115" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">INV</text>
-          <text x="250" y="135" text-anchor="middle" font-size="9" fill="#fff">Deye 5kW</text>
           <rect x="380" y="50" width="80" height="50" fill="#16a34a" rx="4"/>
           <text x="420" y="80" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">HOME</text>
           <rect x="380" y="130" width="80" height="40" fill="#0891b2" rx="4"/>
-          <text x="420" y="155" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">BATTERY 87%</text>
-          <line x1="80" y1="90" x2="80" y2="120" stroke="#eab308" stroke-width="3" stroke-dasharray="4,2">
-            <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" repeatCount="indefinite"/>
-          </line>
-          <line x1="110" y1="140" x2="220" y2="120" stroke="#22c55e" stroke-width="3" stroke-dasharray="4,2">
-            <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" repeatCount="indefinite"/>
-          </line>
-          <line x1="280" y1="100" x2="380" y2="75" stroke="#1d4ed8" stroke-width="3" stroke-dasharray="4,2">
-            <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" repeatCount="indefinite"/>
-          </line>
-          <line x1="280" y1="140" x2="380" y2="150" stroke="#0891b2" stroke-width="3" stroke-dasharray="4,2">
-            <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" repeatCount="indefinite"/>
-          </line>
+          <text x="420" y="155" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">BATTERY</text>
+          <line x1="80" y1="90" x2="80" y2="120" stroke="#eab308" stroke-width="3"/>
+          <line x1="110" y1="140" x2="220" y2="120" stroke="#22c55e" stroke-width="3"/>
+          <line x1="280" y1="100" x2="380" y2="75" stroke="#1d4ed8" stroke-width="3"/>
+          <line x1="280" y1="140" x2="380" y2="150" stroke="#0891b2" stroke-width="3"/>
         </svg>
       </div>
       <div class="dash-chart">
@@ -829,30 +568,23 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           </div>
         </div>
         <div class="chart-bars" id="chart-bars"></div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;padding-top:1rem;margin-top:1rem;border-top:1px solid #f3f4f6">
-          <div><div style="font-size:.75rem;color:#6b7280;text-transform:uppercase">Total</div><div style="font-size:1.25rem;font-weight:700">28 kWh</div></div>
-          <div><div style="font-size:.75rem;color:#6b7280;text-transform:uppercase">Peak</div><div style="font-size:1.25rem;font-weight:700;color:#eab308">5.4 kW</div></div>
-          <div><div style="font-size:.75rem;color:#6b7280;text-transform:uppercase">vs Yesterday</div><div style="font-size:1.25rem;font-weight:700;color:#16a34a">+8%</div></div>
-        </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- CONTACT -->
 <div class="page" id="page-contact">
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Get In Touch</div>
         <h2 class="section-title">Let's Talk Solar</h2>
-        <p class="section-sub">Multiple ways to reach our team</p>
       </div>
       <div class="contact-grid">
         <a class="contact-card" href="tel:+255782435626">
           <div class="contact-icon">📞</div>
           <div class="card-title">Call Us</div>
-          <div class="card-desc">Mon-Fri 8am-6pm, Sat 9am-4pm</div>
+          <div class="card-desc">Mon-Fri 8am-6pm</div>
           <div style="font-weight:700;color:#1d4ed8;margin-top:.5rem">+255 782 435 626</div>
         </a>
         <a class="contact-card" href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%20have%20a%20question%20about%20solar.">
@@ -871,62 +603,26 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       <div class="contact-grid-2">
         <div class="card" style="padding:2rem">
           <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem">Send Us a Message</h3>
-          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitContact(event)">
+          <form id="contact-form" onsubmit="return submitContact(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
-            <input type="hidden" name="subject" value="New contact form submission - MrSolarGrid">
-            <input type="hidden" name="from_name" value="MrSolarGrid Website">
-            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="subject" value="Contact form - MrSolarGrid">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Name <span class="req">*</span></label>
-                <input class="form-input" type="text" name="name" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Phone <span class="req">*</span></label>
-                <input class="form-input" type="tel" name="phone" required placeholder="+255...">
-              </div>
+              <div class="form-group"><label class="form-label">Name <span class="req">*</span></label><input class="form-input" type="text" name="name" required></div>
+              <div class="form-group"><label class="form-label">Phone <span class="req">*</span></label><input class="form-input" type="tel" name="phone" required></div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Email</label>
-              <input class="form-input" type="email" name="email">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Subject <span class="req">*</span></label>
-              <select class="form-select" name="subject_type" required>
-                <option value="">Select a topic</option>
-                <option>General Enquiry</option>
-                <option>Quote Request</option>
-                <option>Technical Question</option>
-                <option>Existing Customer Support</option>
-                <option>Partnership / Supplier</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Message <span class="req">*</span></label>
-              <textarea class="form-textarea" name="message" required></textarea>
-            </div>
+            <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" name="email"></div>
+            <div class="form-group"><label class="form-label">Message <span class="req">*</span></label><textarea class="form-textarea" name="message" required></textarea></div>
             <button class="btn btn-blue" type="submit" id="contact-submit" style="width:100%;justify-content:center">Send Message →</button>
             <div id="contact-result" style="margin-top:1rem;font-size:.875rem;text-align:center"></div>
           </form>
         </div>
         <div>
-          <div class="card" style="padding:1.5rem;margin-bottom:1rem">
+          <div class="card" style="padding:1.5rem">
             <h3 style="font-weight:700;margin-bottom:.75rem">Visit Our Office</h3>
-            <p style="color:#374151;margin-bottom:.5rem"><strong>📍 Address</strong></p>
-            <p style="color:#6b7280;margin-bottom:1rem;padding-left:1.25rem">Magogo Street, Geita<br>Geita Region, Tanzania</p>
-            <p style="color:#374151;margin-bottom:.5rem"><strong>🕐 Office Hours</strong></p>
-            <p style="color:#6b7280;margin-bottom:.5rem;padding-left:1.25rem">Monday - Friday: 8:00 AM - 6:00 PM</p>
-            <p style="color:#6b7280;margin-bottom:1rem;padding-left:1.25rem">Saturday: 9:00 AM - 4:00 PM</p>
-            <p style="color:#374151;margin-bottom:.5rem"><strong>📞 Direct Contact</strong></p>
-            <p style="padding-left:1.25rem"><a href="tel:+255782435626" style="color:#1d4ed8;font-weight:600">+255 782 435 626</a></p>
-            <p style="padding-left:1.25rem;word-break:break-all"><a href="mailto:energies@mrsolargrid.com" style="color:#1d4ed8;font-weight:600">energies@mrsolargrid.com</a></p>
-          </div>
-          <div class="card" style="padding:1.5rem;background:#eff6ff;border-color:#93c5fd">
-            <h3 style="font-weight:700;margin-bottom:.5rem;color:#1e3a8a">⚡ Quick Response Times</h3>
-            <p style="font-size:.875rem;color:#374151;margin-bottom:.5rem">📞 Phone: Immediate during office hours</p>
-            <p style="font-size:.875rem;color:#374151;margin-bottom:.5rem">💬 WhatsApp: Within 1-2 hours</p>
-            <p style="font-size:.875rem;color:#374151;margin-bottom:.5rem">✉️ Email: Within 24 hours</p>
-            <p style="font-size:.875rem;color:#374151">📋 Quote requests: Within 24 hours</p>
+            <p style="color:#6b7280;margin-bottom:.5rem">📍 Magogo Street, Geita, Tanzania</p>
+            <p style="color:#6b7280;margin-bottom:.5rem">🕐 Mon-Fri: 8am-6pm</p>
+            <p style="color:#6b7280">🕐 Sat: 9am-4pm</p>
           </div>
         </div>
       </div>
@@ -934,7 +630,6 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   </section>
 </div>
 
-<!-- QUOTE -->
 <div class="page" id="page-quote">
   <section class="section section-gray">
     <div class="container" style="max-width:780px">
@@ -953,27 +648,20 @@ input,select,textarea{font-family:inherit;font-size:1rem}
             <div class="step-dot" id="step-dot-5"></div>
           </div>
           <div class="step-label" id="step-label">Step 1 of 5 — Property Type</div>
-
-          <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitQuote(event)">
+          <form id="quote-form" onsubmit="return submitQuote(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
-            <input type="hidden" name="subject" value="New solar quote request - MrSolarGrid">
-            <input type="hidden" name="from_name" value="MrSolarGrid Quote Form">
-            <input type="hidden" name="redirect" value="false">
-            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
-            <!-- Step 1 -->
+            <input type="hidden" name="subject" value="Solar quote request - MrSolarGrid">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="quote-step active" data-step="1">
               <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem">What type of property?</h3>
               <div class="option-grid">
-                <div class="option-card" onclick="selectOption(this,'property','residential')"><div class="option-icon">🏠</div><div class="option-title">Residential</div><div class="option-desc">Home, villa, apartment</div></div>
-                <div class="option-card" onclick="selectOption(this,'property','commercial')"><div class="option-icon">🏢</div><div class="option-title">Commercial</div><div class="option-desc">Office, shop, hotel</div></div>
-                <div class="option-card" onclick="selectOption(this,'property','industrial')"><div class="option-icon">🏭</div><div class="option-title">Industrial</div><div class="option-desc">Factory, mine, farm</div></div>
-                <div class="option-card" onclick="selectOption(this,'property','institutional')"><div class="option-icon">🏛️</div><div class="option-title">Institutional</div><div class="option-desc">School, hospital, NGO</div></div>
+                <div class="option-card" onclick="selectOption(this,'property','residential')"><div class="option-icon">🏠</div><div class="option-title">Residential</div></div>
+                <div class="option-card" onclick="selectOption(this,'property','commercial')"><div class="option-icon">🏢</div><div class="option-title">Commercial</div></div>
+                <div class="option-card" onclick="selectOption(this,'property','industrial')"><div class="option-icon">🏭</div><div class="option-title">Industrial</div></div>
+                <div class="option-card" onclick="selectOption(this,'property','institutional')"><div class="option-icon">🏛️</div><div class="option-title">Institutional</div></div>
               </div>
-              <input type="hidden" name="property_type" id="f-property" required>
+              <input type="hidden" name="property_type" id="f-property">
             </div>
-
-            <!-- Step 2 -->
             <div class="quote-step" data-step="2">
               <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem">Roof & site details</h3>
               <div class="form-group">
@@ -983,41 +671,26 @@ input,select,textarea{font-family:inherit;font-size:1rem}
                   <option>Iron sheets (mabati)</option>
                   <option>Concrete flat roof</option>
                   <option>Tile roof</option>
-                  <option>Ground mount (no roof)</option>
-                  <option>Not sure / mixed</option>
+                  <option>Ground mount</option>
+                  <option>Not sure</option>
                 </select>
               </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Available roof area (approximate)</label>
-                  <select class="form-select" name="roof_area">
-                    <option value="">Select size</option>
-                    <option>Less than 20 m²</option>
-                    <option>20-50 m²</option>
-                    <option>50-100 m²</option>
-                    <option>100-300 m²</option>
-                    <option>More than 300 m²</option>
-                    <option>Not sure</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Roof condition</label>
-                  <select class="form-select" name="roof_condition">
-                    <option value="">Select condition</option>
-                    <option>New / excellent</option>
-                    <option>Good</option>
-                    <option>Needs minor repairs</option>
-                    <option>Needs replacement</option>
-                  </select>
-                </div>
+              <div class="form-group">
+                <label class="form-label">Roof area</label>
+                <select class="form-select" name="roof_area">
+                  <option value="">Select size</option>
+                  <option>Less than 20 m²</option>
+                  <option>20-50 m²</option>
+                  <option>50-100 m²</option>
+                  <option>100-300 m²</option>
+                  <option>More than 300 m²</option>
+                </select>
               </div>
             </div>
-
-            <!-- Step 3 -->
             <div class="quote-step" data-step="3">
               <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem">Energy usage</h3>
               <div class="form-group">
-                <label class="form-label">Monthly TANESCO bill (TZS) <span class="req">*</span></label>
+                <label class="form-label">Monthly TANESCO bill <span class="req">*</span></label>
                 <select class="form-select" name="monthly_bill" id="f-bill" required>
                   <option value="">Select range</option>
                   <option>Under 50,000 TZS</option>
@@ -1026,55 +699,36 @@ input,select,textarea{font-family:inherit;font-size:1rem}
                   <option>500,000 - 1,500,000 TZS</option>
                   <option>1,500,000 - 5,000,000 TZS</option>
                   <option>Over 5,000,000 TZS</option>
-                  <option>No grid connection</option>
                 </select>
-                <div class="form-help">This helps us estimate your system size accurately.</div>
               </div>
               <div class="form-group">
-                <label class="form-label">What's your main goal?</label>
+                <label class="form-label">Main goal</label>
                 <select class="form-select" name="goal">
                   <option value="">Select goal</option>
                   <option>Cut my electricity bill</option>
                   <option>Backup during outages</option>
-                  <option>Fully off-grid (no TANESCO)</option>
-                  <option>Hot water only</option>
-                  <option>Streetlights / outdoor lighting</option>
-                  <option>Energy audit first</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Outages per week (approx)</label>
-                <select class="form-select" name="outages">
-                  <option value="">Select frequency</option>
-                  <option>None / very rare</option>
-                  <option>1-2 per week</option>
-                  <option>3-5 per week</option>
-                  <option>Daily</option>
-                  <option>Multiple per day</option>
+                  <option>Fully off-grid</option>
                 </select>
               </div>
             </div>
-
-            <!-- Step 4 -->
             <div class="quote-step" data-step="4">
               <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem">Budget & timeline</h3>
               <div class="form-group">
-                <label class="form-label">Approximate budget (TZS)</label>
+                <label class="form-label">Budget (TZS)</label>
                 <select class="form-select" name="budget">
-                  <option value="">Select budget range</option>
+                  <option value="">Select budget</option>
                   <option>Under 5 million</option>
                   <option>5 - 15 million</option>
                   <option>15 - 30 million</option>
                   <option>30 - 100 million</option>
                   <option>Over 100 million</option>
-                  <option>Need guidance</option>
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label">When do you want to install?</label>
+                <label class="form-label">When to install</label>
                 <select class="form-select" name="timeline">
                   <option value="">Select timeline</option>
-                  <option>ASAP (within 1 month)</option>
+                  <option>ASAP</option>
                   <option>1-3 months</option>
                   <option>3-6 months</option>
                   <option>Just exploring</option>
@@ -1082,46 +736,27 @@ input,select,textarea{font-family:inherit;font-size:1rem}
               </div>
               <div style="background:#eff6ff;border:1px solid #93c5fd;border-radius:.625rem;padding:1rem;margin-top:1rem">
                 <p style="font-size:.875rem;color:#1e3a8a;font-weight:600;margin-bottom:.5rem">📎 Have a TANESCO bill or roof photo?</p>
-                <p style="font-size:.8125rem;color:#374151;line-height:1.5">After submitting this form, you can share photos directly via WhatsApp at <a href="https://wa.me/255782435626" style="color:#16a34a;font-weight:700">+255 782 435 626</a> or email <a href="mailto:energies@mrsolargrid.com" style="color:#1d4ed8;font-weight:700">energies@mrsolargrid.com</a>. This helps us prepare a more accurate quote.</p>
+                <p style="font-size:.8125rem;color:#374151">After submitting, share photos via <a href="https://wa.me/255782435626" style="color:#16a34a;font-weight:700">WhatsApp</a> or <a href="mailto:energies@mrsolargrid.com" style="color:#1d4ed8;font-weight:700">email</a>.</p>
               </div>
             </div>
-
-            <!-- Step 5 -->
             <div class="quote-step" data-step="5">
               <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem">Your contact details</h3>
               <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Full name <span class="req">*</span></label>
-                  <input class="form-input" type="text" name="name" id="f-name" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Phone <span class="req">*</span></label>
-                  <input class="form-input" type="tel" name="phone" id="f-phone" required placeholder="+255...">
-                </div>
+                <div class="form-group"><label class="form-label">Full name <span class="req">*</span></label><input class="form-input" type="text" name="name" id="f-name" required></div>
+                <div class="form-group"><label class="form-label">Phone <span class="req">*</span></label><input class="form-input" type="tel" name="phone" id="f-phone" required></div>
               </div>
               <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Email</label>
-                  <input class="form-input" type="email" name="email">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Location <span class="req">*</span></label>
-                  <input class="form-input" type="text" name="location" id="f-location" required placeholder="City, region">
-                </div>
+                <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" name="email"></div>
+                <div class="form-group"><label class="form-label">Location <span class="req">*</span></label><input class="form-input" type="text" name="location" id="f-location" required placeholder="City, region"></div>
               </div>
-              <div class="form-group">
-                <label class="form-label">Additional notes</label>
-                <textarea class="form-textarea" name="notes" rows="3" placeholder="Any specific requirements or questions"></textarea>
-              </div>
+              <div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" name="notes" rows="3"></textarea></div>
             </div>
-
             <div class="quote-nav">
               <button type="button" class="btn-back" id="btn-back" onclick="quoteBack()" disabled>← Back</button>
               <button type="button" class="btn-next" id="btn-next" onclick="quoteNext()">Continue →</button>
               <button type="submit" class="btn-submit hidden" id="btn-submit">Submit Quote ✓</button>
             </div>
             <div id="quote-result" style="margin-top:1rem;font-size:.875rem;text-align:center"></div>
-            <div id="quote-debug" style="display:none;margin-top:1rem;padding:1rem;background:#fffbeb;border:1px solid #fbbf24;border-radius:.5rem;font-family:monospace;font-size:.75rem;color:#92400e;text-align:left;word-break:break-all;line-height:1.5;max-height:300px;overflow-y:auto"></div>
           </form>
         </div>
       </div>
@@ -1130,17 +765,8 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           <div class="success-icon">✓</div>
           <h2>Thank You, <span id="success-name">Friend</span>!</h2>
           <p>Our engineers will contact you within 24 hours at <strong id="success-phone" style="color:#1d4ed8"></strong>.</p>
-          <div style="text-align:left;background:#fff;border-radius:.75rem;padding:1.25rem;margin-top:1rem">
-            <h3 style="font-weight:700;margin-bottom:.75rem">What happens next?</h3>
-            <ol style="padding-left:1.25rem;color:#4b5563;font-size:.9375rem;line-height:1.8">
-              <li>We review your requirements (within 24 hours)</li>
-              <li>Our engineer calls you to discuss</li>
-              <li>Site visit scheduled (free, no obligation)</li>
-              <li>Custom quote delivered within 3-5 days</li>
-            </ol>
-          </div>
           <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
-            <a class="btn btn-green" href="https://wa.me/255782435626?text=Hi%2C%20I%20just%20submitted%20a%20quote%20request%20on%20your%20website.">💬 Continue on WhatsApp</a>
+            <a class="btn btn-green" href="https://wa.me/255782435626?text=Hi%2C%20I%20just%20submitted%20a%20quote%20request.">💬 Continue on WhatsApp</a>
             <button class="btn btn-blue" onclick="goto('home')">Back to Home</button>
           </div>
         </div>
@@ -1149,136 +775,48 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   </section>
 </div>
 
-<!-- PRIVACY -->
 <div class="page" id="page-privacy">
   <section class="section">
     <div class="container">
       <div class="legal-content">
         <h1>Privacy Policy</h1>
         <div class="updated">Last updated: 10 May 2026</div>
-
-        <p>MrSolarGrid Company Limited ("we", "us", "our") respects your privacy and is committed to protecting your personal data. This policy explains how we collect, use, and safeguard information you provide through our website and services.</p>
-
+        <p>MrSolarGrid Company Limited respects your privacy. This policy explains how we collect, use, and safeguard your information.</p>
         <h2>1. Information We Collect</h2>
-        <p>We collect information you voluntarily provide when you:</p>
-        <ul>
-          <li>Submit a quote request or contact form (name, phone, email, location, property details, energy usage)</li>
-          <li>Upload supporting files such as TANESCO bills or roof photos</li>
-          <li>Communicate with us via WhatsApp, phone, or email</li>
-          <li>Visit our website (anonymous analytics data via Google Analytics — page views, device type, country)</li>
-        </ul>
-
-        <h2>2. How We Use Your Information</h2>
-        <ul>
-          <li>To prepare and deliver solar quotes tailored to your property</li>
-          <li>To contact you about your enquiry, schedule site visits, and provide ongoing support</li>
-          <li>To improve our website and services through aggregated analytics</li>
-          <li>To comply with legal obligations under Tanzanian law</li>
-        </ul>
-
+        <p>Information you provide via forms (name, phone, email, location, property details) and anonymous website usage data.</p>
+        <h2>2. How We Use It</h2>
+        <p>To prepare quotes, contact you about enquiries, schedule site visits, and improve our services.</p>
         <h2>3. Information Sharing</h2>
-        <p>We do not sell, rent, or trade your personal information. We share data only with:</p>
-        <ul>
-          <li>Our engineering and installation teams who need it to serve you</li>
-          <li>Service providers who help us operate (Web3Forms for form submissions, Google Analytics for website data)</li>
-          <li>Authorities if legally required under Tanzania's Data Protection Act 2022</li>
-        </ul>
-
-        <h2>4. Data Storage and Security</h2>
-        <p>We take reasonable steps to protect your personal data using industry-standard practices. Form submissions are transmitted over encrypted HTTPS connections. Files you upload are reviewed and deleted after quote completion unless retained for project records.</p>
-
-        <h2>5. Your Rights</h2>
-        <p>Under Tanzania's Data Protection Act 2022, you have the right to:</p>
-        <ul>
-          <li>Access the personal data we hold about you</li>
-          <li>Request correction of inaccurate information</li>
-          <li>Request deletion of your data (subject to legal retention requirements)</li>
-          <li>Withdraw consent for marketing communications at any time</li>
-        </ul>
-        <p>To exercise these rights, email <a href="mailto:energies@mrsolargrid.com">energies@mrsolargrid.com</a>.</p>
-
-        <h2>6. Cookies and Analytics</h2>
-        <p>We use Google Analytics to understand how visitors use our website. This involves cookies that collect anonymous usage data. You can opt out via your browser settings or Google's <a href="https://tools.google.com/dlpage/gaoptout">opt-out tool</a>.</p>
-
-        <h2>7. Third-Party Links</h2>
-        <p>Our website may link to external sites (WhatsApp, social media, Google Maps). We are not responsible for the privacy practices of these third parties.</p>
-
-        <h2>8. Children's Privacy</h2>
-        <p>Our services are not directed at children under 18. We do not knowingly collect data from minors.</p>
-
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this policy occasionally. The "Last updated" date will reflect changes. Continued use of our website constitutes acceptance of the updated policy.</p>
-
-        <h2>10. Contact Us</h2>
-        <p>For privacy questions or concerns:</p>
-        <ul>
-          <li>Email: <a href="mailto:energies@mrsolargrid.com">energies@mrsolargrid.com</a></li>
-          <li>Phone: +255 782 435 626</li>
-          <li>Address: Magogo Street, Geita, Tanzania</li>
-        </ul>
+        <p>We don't sell or trade your data. Shared only with our team, service providers (Web3Forms), or authorities if legally required.</p>
+        <h2>4. Your Rights</h2>
+        <p>Under Tanzania's Data Protection Act 2022, you can access, correct, or delete your data. Email <a href="mailto:energies@mrsolargrid.com">energies@mrsolargrid.com</a>.</p>
+        <h2>5. Contact</h2>
+        <p>energies@mrsolargrid.com | +255 782 435 626 | Magogo Street, Geita</p>
       </div>
     </div>
   </section>
 </div>
 
-<!-- TERMS -->
 <div class="page" id="page-terms">
   <section class="section">
     <div class="container">
       <div class="legal-content">
         <h1>Terms of Service</h1>
         <div class="updated">Last updated: 10 May 2026</div>
-
-        <p>By using the MrSolarGrid website and services, you agree to these terms. Please read them carefully.</p>
-
+        <p>By using this website, you agree to these terms.</p>
         <h2>1. About Us</h2>
-        <p>MrSolarGrid Company Limited is a registered Tanzanian solar engineering company based at Magogo Street, Geita. We provide solar installation, battery systems, energy audits, monitoring, streetlights, and water heating services.</p>
-
-        <h2>2. Use of Website</h2>
-        <p>You agree to use our website only for lawful purposes. You may not:</p>
-        <ul>
-          <li>Submit false or misleading information through our forms</li>
-          <li>Attempt to gain unauthorized access to our systems</li>
-          <li>Use automated tools to scrape or copy content</li>
-          <li>Interfere with the website's operation or other users' experience</li>
-        </ul>
-
-        <h2>3. Quotes and Estimates</h2>
-        <p>Estimates provided through our online calculator and initial responses are non-binding indications based on the information you provide. Final pricing requires a site visit and detailed engineering assessment. Written quotes following site visits are valid for 30 days unless otherwise stated.</p>
-
-        <h2>4. Service Delivery</h2>
-        <p>Installation timelines, system performance specifications, and warranties are documented in individual contracts signed before work begins. Component warranties are passed through from manufacturers (typically 25 years for panels, 5-10 years for inverters and batteries).</p>
-
-        <h2>5. Payment Terms</h2>
-        <p>Payment terms vary by project size and are documented in your contract. Standard practice is a deposit before equipment ordering, progress payments during installation, and final payment on commissioning.</p>
-
-        <h2>6. Intellectual Property</h2>
-        <p>All content on this website — including text, graphics, logos, and code — is owned by MrSolarGrid Company Limited or used with permission. You may not reproduce, distribute, or create derivative works without written consent.</p>
-
-        <h2>7. Limitation of Liability</h2>
-        <p>While we strive for accuracy, website content is provided "as is" without warranty. We are not liable for decisions made based on website information alone — always confirm details through formal quotes and contracts before proceeding.</p>
-
-        <h2>8. Third-Party Services</h2>
-        <p>Our website uses third-party services (Google Analytics, Web3Forms, Google Maps, WhatsApp). Your use of these services is subject to their respective terms.</p>
-
-        <h2>9. Governing Law</h2>
-        <p>These terms are governed by the laws of the United Republic of Tanzania. Disputes will be resolved through Tanzanian courts.</p>
-
-        <h2>10. Changes</h2>
-        <p>We may update these terms occasionally. Continued use of our services constitutes acceptance of updated terms.</p>
-
-        <h2>11. Contact</h2>
-        <p>Questions about these terms:</p>
-        <ul>
-          <li>Email: <a href="mailto:energies@mrsolargrid.com">energies@mrsolargrid.com</a></li>
-          <li>Phone: +255 782 435 626</li>
-        </ul>
+        <p>MrSolarGrid Company Limited, registered in Tanzania, Magogo Street, Geita.</p>
+        <h2>2. Quotes</h2>
+        <p>Online estimates are non-binding. Final pricing requires a site visit. Written quotes are valid 30 days.</p>
+        <h2>3. Governing Law</h2>
+        <p>Tanzanian law applies. Disputes resolved through Tanzanian courts.</p>
+        <h2>4. Contact</h2>
+        <p>energies@mrsolargrid.com | +255 782 435 626</p>
       </div>
     </div>
   </section>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -1288,29 +826,23 @@ input,select,textarea{font-family:inherit;font-size:1rem}
             <ellipse cx="50" cy="50" rx="45" ry="30" fill="none" stroke="#22c55e" stroke-width="4" transform="rotate(-15 50 50)"/>
             <circle cx="65" cy="35" r="8" fill="#fbbf24"/>
             <path d="M20 70 L50 40 L80 70 L80 80 L20 80 Z" fill="#1e3a8a"/>
-            <rect x="35" y="50" width="35" height="25" fill="#3b82f6" stroke="white" stroke-width="1"/>
+            <rect x="35" y="50" width="35" height="25" fill="#3b82f6"/>
           </svg>
           <div>
             <div style="color:#fff;font-weight:700;font-size:1.125rem">MrSolarGrid</div>
-            <div style="color:#22c55e;font-size:.5625rem;letter-spacing:.05em">SOLAR EXPERTS</div>
+            <div style="color:#22c55e;font-size:.5625rem">SOLAR EXPERTS</div>
           </div>
         </div>
-        <p style="font-size:.875rem;line-height:1.6;max-width:24rem">Tanzania's certified solar engineering experts. Factory-trained on Deye, Victron, Weco, and TBB Chloride.</p>
-        <div class="social-row">
-          <a class="social-link" href="https://www.facebook.com/MrSolarGrid" aria-label="Facebook">f</a>
-          <a class="social-link" href="https://www.instagram.com/MrSolarGrid" aria-label="Instagram">📷</a>
-          <a class="social-link" href="https://wa.me/255782435626" aria-label="WhatsApp">💬</a>
-        </div>
+        <p style="font-size:.875rem;line-height:1.6;max-width:24rem">Tanzania's certified solar engineering experts.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
         <div class="footer-links">
           <a onclick="goto('about')">About</a>
           <a onclick="goto('services')">Services</a>
-          <a onclick="goto('calculator')">Savings Calculator</a>
+          <a onclick="goto('calculator')">Calculator</a>
           <a onclick="goto('projects')">Projects</a>
           <a onclick="goto('faq')">FAQ</a>
-          <a onclick="goto('dashboard')">Live Demo</a>
         </div>
       </div>
       <div>
@@ -1319,8 +851,6 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           <a onclick="gotoService('solar-installation')">Solar Installation</a>
           <a onclick="gotoService('battery-systems')">Battery Systems</a>
           <a onclick="gotoService('energy-audits')">Energy Audits</a>
-          <a onclick="gotoService('streetlights')">Streetlights</a>
-          <a onclick="gotoService('water-heating')">Water Heating</a>
         </div>
       </div>
       <div>
@@ -1329,443 +859,258 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           <a href="tel:+255782435626">+255 782 435 626</a>
           <a href="mailto:energies@mrsolargrid.com">energies@mrsolargrid.com</a>
           <span>Magogo Street, Geita</span>
-          <span>Mon-Fri: 8am-6pm</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 MrSolarGrid Company Limited. All rights reserved.</div>
-      <div style="display:flex;gap:1rem"><a onclick="goto('privacy')" style="cursor:pointer">Privacy</a><a onclick="goto('terms')" style="cursor:pointer">Terms</a></div>
+      <div>© 2026 MrSolarGrid Company Limited.</div>
+      <div style="display:flex;gap:1rem"><a onclick="goto('privacy')">Privacy</a><a onclick="goto('terms')">Terms</a></div>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27m%20interested%20in%20learning%20more%20about%20solar." aria-label="Chat on WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/>
-  </svg>
+<a class="wa-float" href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27m%20interested%20in%20solar." aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
 </a>
 
 <script>
-// ============= NAVIGATION =============
-function goto(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + page).classList.add('active');
-  document.querySelectorAll('[data-page]').forEach(b => b.classList.toggle('active', b.dataset.page === page));
-  document.getElementById('mobile-menu').classList.remove('open');
-  window.scrollTo({top: 0, behavior: 'smooth'});
+function goto(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  var el=document.getElementById('page-'+page);
+  if(el)el.classList.add('active');
+  document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+  var mm=document.getElementById('mobile-menu');if(mm)mm.classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-function gotoService(svc) { goto('services'); showService(svc); }
-function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
-window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
-});
+function gotoService(s){goto('services');showService(s);}
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10);});
 
-// ============= SERVICES =============
-const services = {
-  'solar-installation': {
-    title: 'Solar Installation', icon: '☀️',
-    overview: 'Custom-designed photovoltaic systems for any property size. From 1kW residential systems to 500kW+ industrial installations, all using premium components and certified engineering.',
-    process: [
-      ['Site Survey','Full assessment of roof, electrical, shading'],
-      ['System Design','Engineering calculations specific to your needs'],
-      ['Component Sourcing','Authentic, warranty-backed equipment'],
-      ['Installation','Certified technicians, structural & electrical safety'],
-      ['Commissioning','Performance testing and handover'],
-      ['Monitoring','Ongoing remote performance tracking']
-    ],
-    benefits: [
-      ['Reduced bills','Cut electricity costs by 70-100%'],
-      ['Energy security','Power through outages reliably'],
-      ['Increased value','Property value rises with solar'],
-      ['Eco impact','Reduce carbon footprint significantly']
-    ]
-  },
-  'battery-systems': {
-    title: 'Battery Systems', icon: '🔋',
-    overview: 'Lithium battery storage solutions using Weco and TBB Chloride. Ride through outages, store solar energy for night use, and optimize your power consumption.',
-    process: [
-      ['Load Analysis','Calculate exact backup needs'],
-      ['Sizing','Match capacity to usage patterns'],
-      ['Battery Selection','Lithium or industrial chemistry'],
-      ['Integration','Connect to existing or new system'],
-      ['Configuration','Charge/discharge optimization'],
-      ['Testing','Verify backup duration and switching']
-    ],
-    benefits: [
-      ['No outage downtime','Seamless backup during grid failures'],
-      ['Use solar at night','Store daytime solar for evening use'],
-      ['Long lifespan','10-15 year battery life with proper care'],
-      ['Scalable','Add more capacity as needs grow']
-    ]
-  },
-  'energy-audits': {
-    title: 'Energy Audits', icon: '📊',
-    overview: 'Comprehensive site analysis to identify how you actually use energy and where savings are possible — before spending money on solar.',
-    process: [
-      ['Data Collection','Gather 12 months of bills and usage'],
-      ['On-Site Assessment','Walk-through inspection'],
-      ['Equipment Audit','Identify inefficient appliances'],
-      ['Pattern Analysis','Hourly load profiling'],
-      ['Recommendations','Quick wins + solar sizing'],
-      ['Report Delivery','Detailed findings with savings projection']
-    ],
-    benefits: [
-      ['Quick wins','Find savings without solar investment'],
-      ['Right-sized solar','Avoid over- or under-spec systems'],
-      ['ROI clarity','Know real payback before spending'],
-      ['Documentation','Professional report for finance approval']
-    ]
-  },
-  'monitoring': {
-    title: 'Remote Monitoring', icon: '📡',
-    overview: '24/7 remote monitoring with predictive maintenance. We catch problems before they affect your power supply.',
-    process: [
-      ['Integration','Connect to monitoring platform'],
-      ['Baseline','Establish performance norms'],
-      ['Live Tracking','Real-time data flow'],
-      ['Alerts','Predictive issue detection'],
-      ['Updates','Remote firmware management'],
-      ['Maintenance','Scheduled service when needed']
-    ],
-    benefits: [
-      ['24/7 visibility','Always know system status'],
-      ['Faster response','Issues resolved quickly'],
-      ['Maximize output','Optimal performance maintained'],
-      ['Extended lifespan','Proactive care extends equipment life']
-    ]
-  },
-  'streetlights': {
-    title: 'Solar Streetlights', icon: '💡',
-    overview: 'Standalone solar streetlights with integrated panels and batteries. Perfect for streets, estates, parking lots, and facilities where grid extension is costly.',
-    process: [
-      ['Site Survey','Assess locations and lighting needs'],
-      ['Lumen Calculation','Determine correct light output'],
-      ['System Spec','Match panel and battery to needs'],
-      ['Foundation','Concrete bases for pole stability'],
-      ['Installation','Pole erection and mounting'],
-      ['Commissioning','Test operation and sensors']
-    ],
-    benefits: [
-      ['No electricity bills','100% solar-powered lighting'],
-      ['Improved security','Reliable nighttime illumination'],
-      ['Eco-friendly','Zero emissions, clean light'],
-      ['Low maintenance','Sealed units, minimal service']
-    ]
-  },
-  'water-heating': {
-    title: 'Solar Water Heating', icon: '🚿',
-    overview: 'Solar thermal collectors and heat pumps for hot water. Ideal for homes, hotels, hospitals, and any facility with significant hot water demand.',
-    process: [
-      ['Hot Water Audit','Calculate daily demand'],
-      ['System Selection','Thermal vs heat pump'],
-      ['Sizing','Tank and collector capacity'],
-      ['Installation','Roof and plumbing work'],
-      ['Integration','Backup heating connection'],
-      ['Commissioning','Temperature and flow testing']
-    ],
-    benefits: [
-      ['Cut heating costs','Reduce water heating bills 70-100%'],
-      ['Reliable hot water','Consistent supply year-round'],
-      ['Long-lasting','15-20 year system lifespan'],
-      ['Multiple options','Thermal or heat pump tech']
-    ]
-  }
+var services={
+  'solar-installation':{title:'Solar Installation',icon:'☀️',overview:'Custom-designed photovoltaic systems for any property size. From 1kW residential to 500kW+ industrial.',process:[['Site Survey','Full assessment of roof, electrical, shading'],['System Design','Engineering calculations specific to your needs'],['Component Sourcing','Authentic, warranty-backed equipment'],['Installation','Certified technicians'],['Commissioning','Performance testing and handover'],['Monitoring','Ongoing remote performance tracking']],benefits:[['Reduced bills','Cut electricity costs by 70-100%'],['Energy security','Power through outages reliably'],['Property value','Solar increases home value'],['Eco impact','Reduce carbon footprint']]},
+  'battery-systems':{title:'Battery Systems',icon:'🔋',overview:'Lithium battery storage using Weco and TBB Chloride. Ride through outages, store solar energy.',process:[['Load Analysis','Calculate exact backup needs'],['Sizing','Match capacity to usage'],['Selection','Lithium or industrial chemistry'],['Integration','Connect to existing system'],['Configuration','Optimize charge/discharge'],['Testing','Verify backup duration']],benefits:[['No outage downtime','Seamless backup'],['Use solar at night','Store daytime production'],['Long lifespan','10-15 years with proper care'],['Scalable','Add capacity as needs grow']]},
+  'energy-audits':{title:'Energy Audits',icon:'📊',overview:'Comprehensive site analysis to identify how you use energy and where savings are possible.',process:[['Data Collection','Gather 12 months of bills'],['On-Site Assessment','Walk-through inspection'],['Equipment Audit','Identify inefficient appliances'],['Pattern Analysis','Hourly load profiling'],['Recommendations','Quick wins + solar sizing'],['Report Delivery','Detailed findings with projections']],benefits:[['Quick wins','Find savings without solar'],['Right-sized solar','Avoid over-spec systems'],['ROI clarity','Know real payback'],['Documentation','Professional report']]},
+  'monitoring':{title:'Remote Monitoring',icon:'📡',overview:'24/7 remote monitoring with predictive maintenance.',process:[['Integration','Connect to platform'],['Baseline','Performance norms'],['Live Tracking','Real-time data'],['Alerts','Predictive issues'],['Updates','Firmware management'],['Maintenance','Scheduled service']],benefits:[['24/7 visibility','Always know status'],['Faster response','Issues resolved quickly'],['Maximize output','Optimal performance'],['Extended life','Proactive care']]},
+  'streetlights':{title:'Solar Streetlights',icon:'💡',overview:'Standalone solar streetlights with integrated panels and batteries.',process:[['Site Survey','Assess locations'],['Lumen Calculation','Correct light output'],['System Spec','Match panel and battery'],['Foundation','Concrete bases'],['Installation','Pole erection'],['Commissioning','Test sensors']],benefits:[['No electricity bills','100% solar-powered'],['Improved security','Reliable lighting'],['Eco-friendly','Zero emissions'],['Low maintenance','Sealed units']]},
+  'water-heating':{title:'Solar Water Heating',icon:'🚿',overview:'Solar thermal collectors and heat pumps for hot water.',process:[['Hot Water Audit','Calculate demand'],['System Selection','Thermal vs heat pump'],['Sizing','Tank and collector capacity'],['Installation','Roof and plumbing'],['Integration','Backup heating'],['Commissioning','Temperature testing']],benefits:[['Cut heating costs','Reduce bills 70-100%'],['Reliable hot water','Year-round supply'],['Long-lasting','15-20 year lifespan'],['Multiple options','Thermal or heat pump']]}
 };
-
-function showService(key) {
-  const s = services[key];
-  if (!s) return;
-  document.querySelectorAll('.svc-tab').forEach(t => t.classList.toggle('active', t.dataset.svc === key));
-  const html = `
-    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-      <div style="font-size:2.5rem">${s.icon}</div>
-      <div><h2 style="font-size:1.5rem;font-weight:800">${s.title}</h2></div>
-    </div>
-    <p class="svc-overview">${s.overview}</p>
-    <h3 style="font-weight:700;margin-bottom:1rem;font-size:1.125rem">Our Process</h3>
-    <div class="process-grid" style="margin-bottom:2rem">
-      ${s.process.map((p,i) => `
-        <div class="process-card">
-          <div class="process-num">${i+1}</div>
-          <div class="process-title">${p[0]}</div>
-          <div class="process-desc">${p[1]}</div>
-        </div>`).join('')}
-    </div>
-    <h3 style="font-weight:700;margin-bottom:1rem;font-size:1.125rem">Key Benefits</h3>
-    <div class="card-grid card-grid-2">
-      ${s.benefits.map(b => `
-        <div class="card">
-          <div class="card-title">${b[0]}</div>
-          <div class="card-desc">${b[1]}</div>
-        </div>`).join('')}
-    </div>
-    <div style="background:#eff6ff;border:1px solid #93c5fd;border-radius:.875rem;padding:1.5rem;margin-top:2rem;text-align:center">
-      <h3 style="font-weight:700;margin-bottom:.5rem">Ready to get started with ${s.title}?</h3>
-      <p style="color:#4b5563;margin-bottom:1rem">Get a free quote tailored to your property.</p>
-      <button class="btn btn-blue" onclick="goto('quote')">Request a Quote →</button>
-    </div>
-  `;
-  document.getElementById('svc-content').innerHTML = html;
+function showService(key){
+  var s=services[key];if(!s)return;
+  document.querySelectorAll('.svc-tab').forEach(t=>t.classList.toggle('active',t.dataset.svc===key));
+  var html='<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><div style="font-size:2.5rem">'+s.icon+'</div><h2 style="font-size:1.5rem;font-weight:800">'+s.title+'</h2></div>';
+  html+='<p class="svc-overview">'+s.overview+'</p>';
+  html+='<h3 style="font-weight:700;margin-bottom:1rem">Our Process</h3><div class="process-grid" style="margin-bottom:2rem">';
+  s.process.forEach(function(p,i){html+='<div class="process-card"><div class="process-num">'+(i+1)+'</div><div class="process-title">'+p[0]+'</div><div class="process-desc">'+p[1]+'</div></div>';});
+  html+='</div><h3 style="font-weight:700;margin-bottom:1rem">Key Benefits</h3><div class="card-grid card-grid-2">';
+  s.benefits.forEach(function(b){html+='<div class="card"><div class="card-title">'+b[0]+'</div><div class="card-desc">'+b[1]+'</div></div>';});
+  html+='</div><div style="background:#eff6ff;border:1px solid #93c5fd;border-radius:.875rem;padding:1.5rem;margin-top:2rem;text-align:center"><h3 style="font-weight:700;margin-bottom:.5rem">Ready for '+s.title+'?</h3><button class="btn btn-blue" onclick="goto(\'quote\')">Request a Quote →</button></div>';
+  document.getElementById('svc-content').innerHTML=html;
 }
 showService('solar-installation');
 
-// ============= FAQ =============
-const faqs = [
-  ['general','How does solar power actually work?','Solar panels convert sunlight into DC electricity. An inverter converts that to AC power your appliances use. Excess can be stored in batteries or fed back to the grid.'],
-  ['general','Is solar reliable in Tanzania?','Yes — Tanzania receives 5-7 sun-hours daily, among the best in the world for solar. Modern systems work even on cloudy days, just at reduced output.'],
-  ['general','Do you serve outside Geita?','Yes. We serve all of Tanzania — Mwanza, Dar es Salaam, Arusha, Dodoma, and beyond. Travel costs may apply for distant sites.'],
-  ['cost','How much does a solar system cost?','For 5kW residential: typically 12-18 million TZS depending on battery size and components. Commercial and industrial vary widely. Get a free quote for accurate pricing.'],
-  ['cost','How long until I recoup my investment?','Typically 4-7 years for residential, 3-5 years for commercial. After payback, the system continues producing free electricity for 20+ years.'],
-  ['cost','Do you offer financing?','We work with several Tanzanian financing partners. Contact us to discuss options that match your budget and timeline.'],
-  ['cost','Are there any tax benefits?','Tanzania offers VAT exemptions on solar equipment. Commercial installations may qualify for additional tax incentives. We help with documentation.'],
-  ['technical','Which inverter brands do you install?','We are factory-certified on Deye, Victron, and other premium brands. We choose based on your specific application — hybrid, off-grid, or grid-tied.'],
-  ['technical','What batteries do you use?','Lithium batteries from Weco for residential and commercial, TBB Chloride for industrial applications. Both have manufacturer warranties of 5-10 years.'],
-  ['technical','Will my appliances still work?','Yes. Properly sized solar systems power everything you currently use, including air conditioners, refrigerators, and machinery.'],
-  ['install','How long does installation take?','Residential: 2-4 days typically. Commercial: 1-2 weeks. Industrial: 2-6 weeks depending on scale.'],
-  ['install','Do I need permits?','Some installations require TANESCO approval and local council permits. We handle all paperwork on your behalf.'],
-  ['install','What if my roof needs work first?','We assess roof condition during site survey. If repairs are needed, we recommend completing them first or coordinating with our installation.'],
-  ['maintenance','How often do panels need cleaning?','In Tanzania, every 2-3 months during dry season is typical. Heavy rain often handles it. We offer annual maintenance contracts.'],
-  ['maintenance','What if something breaks?','All components carry manufacturer warranties (panels: 25 years performance, inverters: 5-10 years, batteries: 5-10 years). We handle warranty claims for our clients.'],
-  ['maintenance','Can I monitor my own system?','Yes. Every system we install includes monitoring through the manufacturer\'s app (Deye Cloud, VRM, etc.). You see production, consumption, and battery status in real time.'],
-  ['maintenance','What happens during a power outage?','With battery backup, your essential loads continue running automatically. Without battery, grid-tied systems shut off for safety until grid returns.']
+var faqs=[
+  ['general','How does solar power work?','Solar panels convert sunlight into DC electricity. An inverter converts that to AC power your appliances use. Excess can be stored in batteries.'],
+  ['general','Is solar reliable in Tanzania?','Yes. Tanzania receives 5-7 sun-hours daily, among the best for solar.'],
+  ['general','Do you serve outside Geita?','Yes, all of Tanzania — Mwanza, Dar es Salaam, Arusha, Dodoma, and beyond.'],
+  ['cost','How much does a solar system cost?','5kW residential: 12-18 million TZS. Get a free quote for accurate pricing.'],
+  ['cost','How long until I recoup investment?','4-7 years for residential, 3-5 years for commercial.'],
+  ['cost','Do you offer financing?','We work with Tanzanian financing partners. Contact us to discuss.'],
+  ['technical','Which inverter brands?','Deye, Victron, and other premium brands.'],
+  ['technical','What batteries?','Weco for residential, TBB Chloride for industrial. 5-10 year warranties.'],
+  ['install','How long does installation take?','Residential: 2-4 days. Commercial: 1-2 weeks. Industrial: 2-6 weeks.'],
+  ['install','Do I need permits?','Some installations need TANESCO approval. We handle paperwork.'],
+  ['maintenance','How often do panels need cleaning?','Every 2-3 months in dry season. Annual maintenance contracts available.'],
+  ['maintenance','What if something breaks?','Manufacturer warranties cover panels (25 years), inverters and batteries (5-10 years).']
 ];
-const faqCats = {general:'General',cost:'Cost & Savings',technical:'Technical',install:'Installation',maintenance:'Maintenance'};
+function renderFaq(filter){
+  filter=filter||'all';
+  var list=filter==='all'?faqs:faqs.filter(f=>f[0]===filter);
+  var html='';
+  list.forEach(function(f,i){html+='<div class="faq-item" id="faq-'+i+'"><button class="faq-q" onclick="toggleFaq('+i+')"><span>'+f[1]+'</span><span class="faq-toggle">▼</span></button><div class="faq-a">'+f[2]+'</div></div>';});
+  document.getElementById('faq-list').innerHTML=html;
+}
+function filterFaq(c){
+  document.querySelectorAll('.faq-cat').forEach(function(b){b.classList.toggle('active',b.textContent.toLowerCase().indexOf(c==='all'?'all':c.split(' ')[0])>-1);});
+  renderFaq(c);
+}
+function toggleFaq(i){document.getElementById('faq-'+i).classList.toggle('open');}
+renderFaq('all');
 
-function renderFaq(filter='all') {
-  const list = filter === 'all' ? faqs : faqs.filter(f => f[0] === filter);
-  document.getElementById('faq-list').innerHTML = list.map((f,i) => `
-    <div class="faq-item" id="faq-${i}">
-      <button class="faq-q" onclick="toggleFaq(${i})">
-        <span>${f[1]}</span>
-        <span class="faq-toggle">▼</span>
-      </button>
-      <div class="faq-a">${f[2]}</div>
-    </div>
-  `).join('');
-}
-function filterFaq(cat) {
-  document.querySelectorAll('.faq-cat').forEach(c => c.classList.toggle('active', c.dataset.cat === cat));
-  renderFaq(cat);
-}
-function toggleFaq(i) {
-  document.getElementById('faq-' + i).classList.toggle('open');
-}
-renderFaq();
-
-// ============= DASHBOARD CHART =============
-function buildBars(view) {
-  let bars = [];
-  if (view === 'today') {
-    for (let h = 0; h < 24; h++) {
-      let v = 0;
-      if (h >= 6 && h <= 18) {
-        const peak = 12;
-        v = Math.max(0, 5 * Math.cos((h - peak) * Math.PI / 12));
-      }
-      bars.push({label: h.toString().padStart(2,'0'), value: v});
+function buildBars(view){
+  var bars=[];
+  if(view==='today'){
+    for(var h=0;h<24;h++){
+      var v=0;
+      if(h>=6&&h<=18){v=Math.max(0,5*Math.cos((h-12)*Math.PI/12));}
+      bars.push({label:String(h).padStart(2,'0'),value:v});
     }
-  } else if (view === 'week') {
-    bars = [['Mon',24],['Tue',28],['Wed',31],['Thu',26],['Fri',30],['Sat',32],['Sun',28]].map(([l,v]) => ({label:l, value:v}));
-  } else {
-    for (let d = 1; d <= 30; d++) {
-      bars.push({label: d.toString(), value: 22 + Math.sin(d*0.5)*8 + (d%5)});
-    }
+  }else if(view==='week'){
+    var w=[['Mon',24],['Tue',28],['Wed',31],['Thu',26],['Fri',30],['Sat',32],['Sun',28]];
+    bars=w.map(function(x){return {label:x[0],value:x[1]};});
+  }else{
+    for(var d=1;d<=30;d++){bars.push({label:String(d),value:22+Math.sin(d*0.5)*8+(d%5)});}
   }
-  const max = Math.max(...bars.map(b => b.value), 1);
-  document.getElementById('chart-bars').innerHTML = bars.map(b => `
-    <div class="chart-bar-wrap">
-      <div class="chart-bar" style="height:${(b.value/max)*100}%"></div>
-      <div class="chart-label">${b.label}</div>
-    </div>
-  `).join('');
+  var max=Math.max.apply(null,bars.map(function(b){return b.value;}).concat([1]));
+  var html='';
+  bars.forEach(function(b){html+='<div class="chart-bar-wrap"><div class="chart-bar" style="height:'+(b.value/max*100)+'%"></div><div class="chart-label">'+b.label+'</div></div>';});
+  document.getElementById('chart-bars').innerHTML=html;
 }
-function switchChart(view) {
-  document.querySelectorAll('.chart-tab').forEach(t => t.classList.toggle('active', t.dataset.view === view));
+function switchChart(view){
+  document.querySelectorAll('.chart-tab').forEach(function(t){t.classList.toggle('active',t.dataset.view===view);});
   buildBars(view);
 }
 buildBars('today');
 
-// ============= QUOTE FORM =============
-let quoteStep = 1;
-const totalSteps = 5;
-const stepNames = ['Property Type','Roof Details','Energy Usage','Budget & Timeline','Contact Details'];
+var CALC={TARIFF:292,COMM:292,IND:195,SUN:5.5,GRID:2200000,HYBRID:3200000,FULL:4500000,OFF:5500000,CO2:0.5,LIFE:25,DEG:0.005};
+function fmt(n){
+  if(n>=1000000)return(n/1000000).toFixed(1).replace('.0','')+'M';
+  if(n>=1000)return Math.round(n/1000)+'K';
+  return Math.round(n).toString();
+}
+function updateCalc(){
+  var bill=parseInt(document.getElementById('calc-bill').value);
+  var type=document.getElementById('calc-type').value;
+  var backup=document.getElementById('calc-backup').value;
+  var outages=parseInt(document.getElementById('calc-outages').value);
+  document.getElementById('calc-bill-display').textContent=fmt(bill)+' TZS';
+  document.getElementById('calc-outages-display').textContent=outages;
+  var tariff=type==='industrial'?CALC.IND:CALC.TARIFF;
+  var monthlyKwh=bill/tariff;
+  var dailyKwh=monthlyKwh/30;
+  var size=Math.max(1,dailyKwh/(CALC.SUN*0.85));
+  var sizeR=Math.ceil(size*2)/2;
+  var costPerKw=CALC.HYBRID;
+  if(backup==='none')costPerKw=CALC.GRID;
+  if(backup==='full')costPerKw=CALC.FULL;
+  if(backup==='offgrid')costPerKw=CALC.OFF;
+  var cost=sizeR*costPerKw;
+  var coverage=0.9;
+  if(backup==='none')coverage=0.7;
+  if(backup==='full')coverage=0.95;
+  if(backup==='offgrid')coverage=1.0;
+  var monthly=bill*coverage;
+  var annual=monthly*12;
+  var payback=cost/annual;
+  var lifetime=0;
+  for(var y=1;y<=CALC.LIFE;y++){lifetime+=annual*Math.pow(1-CALC.DEG,y);}
+  lifetime-=cost;
+  var co2=(monthlyKwh*12*coverage*CALC.CO2)/1000;
+  document.getElementById('calc-size').textContent=sizeR.toFixed(1)+' kW';
+  document.getElementById('calc-cost').textContent=fmt(cost)+' TZS';
+  document.getElementById('calc-monthly').textContent=fmt(monthly)+' TZS';
+  document.getElementById('calc-payback').textContent=payback.toFixed(1)+' years';
+  document.getElementById('calc-lifetime').textContent=fmt(Math.max(0,lifetime))+' TZS';
+  document.getElementById('calc-co2').textContent=co2.toFixed(1)+' tonnes';
+}
+updateCalc();
 
-function selectOption(el, field, value) {
-  el.parentElement.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+var quoteStep=1;
+var totalSteps=5;
+var stepNames=['Property Type','Roof Details','Energy Usage','Budget & Timeline','Contact Details'];
+function selectOption(el,field,value){
+  el.parentElement.querySelectorAll('.option-card').forEach(function(c){c.classList.remove('selected');});
   el.classList.add('selected');
-  document.getElementById('f-' + field).value = value;
+  document.getElementById('f-'+field).value=value;
   updateQuoteNav();
 }
-function quoteNext() {
-  if (!validateStep(quoteStep)) return;
-  if (quoteStep < totalSteps) {
-    quoteStep++;
-    showStep();
-  }
+function quoteNext(){
+  if(!validateStep(quoteStep))return;
+  if(quoteStep<totalSteps){quoteStep++;showStep();}
 }
-function quoteBack() {
-  if (quoteStep > 1) { quoteStep--; showStep(); }
+function quoteBack(){
+  if(quoteStep>1){quoteStep--;showStep();}
 }
-function showStep() {
-  document.querySelectorAll('.quote-step').forEach(s => s.classList.toggle('active', parseInt(s.dataset.step) === quoteStep));
-  for (let i = 1; i <= totalSteps; i++) {
-    const dot = document.getElementById('step-dot-' + i);
+function showStep(){
+  document.querySelectorAll('.quote-step').forEach(function(s){s.classList.toggle('active',parseInt(s.dataset.step)===quoteStep);});
+  for(var i=1;i<=totalSteps;i++){
+    var dot=document.getElementById('step-dot-'+i);
     dot.classList.remove('active','done');
-    if (i < quoteStep) dot.classList.add('done');
-    if (i === quoteStep) dot.classList.add('active');
+    if(i<quoteStep)dot.classList.add('done');
+    if(i===quoteStep)dot.classList.add('active');
   }
-  document.getElementById('step-label').textContent = `Step ${quoteStep} of ${totalSteps} — ${stepNames[quoteStep-1]}`;
-  document.getElementById('btn-back').disabled = quoteStep === 1;
-  document.getElementById('btn-next').classList.toggle('hidden', quoteStep === totalSteps);
-  document.getElementById('btn-submit').classList.toggle('hidden', quoteStep !== totalSteps);
+  document.getElementById('step-label').textContent='Step '+quoteStep+' of '+totalSteps+' — '+stepNames[quoteStep-1];
+  document.getElementById('btn-back').disabled=quoteStep===1;
+  document.getElementById('btn-next').classList.toggle('hidden',quoteStep===totalSteps);
+  document.getElementById('btn-submit').classList.toggle('hidden',quoteStep!==totalSteps);
   updateQuoteNav();
 }
-function validateStep(step) {
-  if (step === 1) return !!document.getElementById('f-property').value;
-  if (step === 2) return !!document.getElementById('f-roof-type').value;
-  if (step === 3) return !!document.getElementById('f-bill').value;
+function validateStep(step){
+  if(step===1)return !!document.getElementById('f-property').value;
+  if(step===2)return !!document.getElementById('f-roof-type').value;
+  if(step===3)return !!document.getElementById('f-bill').value;
   return true;
 }
-function updateQuoteNav() {
-  const ok = validateStep(quoteStep);
-  document.getElementById('btn-next').disabled = !ok;
+function updateQuoteNav(){
+  document.getElementById('btn-next').disabled=!validateStep(quoteStep);
 }
-document.querySelectorAll('#quote-form select, #quote-form input').forEach(el => {
-  el.addEventListener('change', updateQuoteNav);
-  el.addEventListener('input', updateQuoteNav);
-});
+showStep();
 
-async function submitQuote(e) {
-  // Prevent default to try JavaScript submission first
+function submitQuote(e){
   e.preventDefault();
-  const result = document.getElementById('quote-result');
-  const btn = document.getElementById('btn-submit');
-  const form = document.getElementById('quote-form');
-  const debugBox = document.getElementById('quote-debug');
-
-  const nameVal = document.getElementById('f-name').value.trim();
-  const phoneVal = document.getElementById('f-phone').value.trim();
-  const locationVal = document.getElementById('f-location').value.trim();
-  if (!nameVal || !phoneVal || !locationVal) {
-    result.innerHTML = '<div style="color:#dc2626">Please fill in name, phone, and location.</div>';
+  var name=document.getElementById('f-name').value.trim();
+  var phone=document.getElementById('f-phone').value.trim();
+  var loc=document.getElementById('f-location').value.trim();
+  if(!name||!phone||!loc){
+    document.getElementById('quote-result').innerHTML='<div style="color:#dc2626">Please fill name, phone, and location.</div>';
     return false;
   }
-
-  btn.classList.add('btn-loading');
-  btn.disabled = true;
-  result.innerHTML = '<div style="color:#6b7280">Sending your request...</div>';
-
-  // Clear botcheck
-  const botcheck = form.querySelector('[name="botcheck"]');
-  if (botcheck) botcheck.checked = false;
-
-  // Build payload using FormData -> object pattern from Web3Forms docs
-  const formData = new FormData(form);
-  const object = {};
-  formData.forEach((value, key) => {
-    if (key !== 'botcheck') object[key] = value;
-  });
-
-  if (debugBox) {
-    debugBox.style.display = 'block';
-    debugBox.innerHTML = '<strong>SENDING TO WEB3FORMS:</strong><br>' +
-      JSON.stringify(object, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
-  }
-
-  try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(object)
-    });
-
-    let data;
-    const responseText = await response.text();
-    try { data = JSON.parse(responseText); }
-    catch { data = { success: false, message: responseText.substring(0, 300) }; }
-
-    if (debugBox) {
-      debugBox.innerHTML += '<br><br><strong>HTTP STATUS:</strong> ' + response.status +
-        '<br><strong>WEB3FORMS RESPONSE:</strong><br>' +
-        JSON.stringify(data, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
-    }
-
-    if (response.ok && data.success === true) {
-      document.getElementById('success-name').textContent = nameVal.split(' ')[0] || 'Friend';
-      document.getElementById('success-phone').textContent = phoneVal;
+  var btn=document.getElementById('btn-submit');
+  var result=document.getElementById('quote-result');
+  btn.classList.add('btn-loading');btn.disabled=true;
+  result.innerHTML='<div style="color:#6b7280">Sending...</div>';
+  var form=document.getElementById('quote-form');
+  var bc=form.querySelector('[name="botcheck"]');if(bc)bc.checked=false;
+  var fd=new FormData(form);
+  var obj={};fd.forEach(function(v,k){if(k!=='botcheck')obj[k]=v;});
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify(obj)
+  }).then(function(r){return r.json().then(function(d){return{status:r.status,data:d};});})
+  .then(function(res){
+    if(res.status===200&&res.data.success){
+      document.getElementById('success-name').textContent=name.split(' ')[0]||'Friend';
+      document.getElementById('success-phone').textContent=phone;
       document.getElementById('quote-form-wrap').classList.add('hidden');
       document.getElementById('quote-success').classList.remove('hidden');
-      window.scrollTo({top: 0, behavior: 'smooth'});
-      return false;
-    } else {
-      throw new Error('Status ' + response.status + ': ' + (data.message || 'Web3Forms rejected the submission'));
+      window.scrollTo({top:0,behavior:'smooth'});
+    }else{
+      throw new Error((res.data&&res.data.message)||('HTTP '+res.status));
     }
-  } catch (err) {
-    if (debugBox) {
-      debugBox.innerHTML += '<br><br><strong style="color:#dc2626">ERROR:</strong> ' + err.message;
-    }
-
-    const summary = Object.entries(object)
-      .filter(([k,v]) => !['access_key','subject','from_name'].includes(k) && v)
-      .map(([k,v]) => `${k.replace(/_/g,' ')}: ${v}`)
-      .join('%0D%0A');
-
-    result.innerHTML = `<div style="color:#dc2626;line-height:1.6;text-align:left;background:#fef2f2;padding:1rem;border-radius:.5rem;border:1px solid #fca5a5;margin-top:1rem">
-      <strong>Online submission failed.</strong> Your details are saved — please send them via:<br><br>
-      <a href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27d%20like%20a%20quote.%20My%20name%20is%20${encodeURIComponent(nameVal)}%20in%20${encodeURIComponent(locationVal)}.%20Phone%3A%20${encodeURIComponent(phoneVal)}" style="color:#16a34a;text-decoration:underline;font-weight:700;font-size:1rem">💬 Send via WhatsApp (recommended)</a><br><br>
-      <a href="mailto:energies@mrsolargrid.com?subject=Solar%20Quote%20Request%20-%20${encodeURIComponent(nameVal)}&body=${summary}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📧 Send via Email</a><br>
-      <a href="tel:+255782435626" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📞 Call +255 782 435 626</a>
-    </div>`;
-    btn.classList.remove('btn-loading');
-    btn.disabled = false;
-    return false;
-  }
+  }).catch(function(err){
+    var summary=Object.keys(obj).filter(function(k){return k!=='access_key'&&k!=='subject'&&obj[k];}).map(function(k){return k+': '+obj[k];}).join('%0D%0A');
+    result.innerHTML='<div style="color:#dc2626;text-align:left;background:#fef2f2;padding:1rem;border-radius:.5rem;border:1px solid #fca5a5;margin-top:1rem"><strong>Submission failed: '+err.message+'</strong><br><br>'+
+      '<a href="https://wa.me/255782435626?text=Hi%2C%20I%27d%20like%20a%20quote.%20Name%3A%20'+encodeURIComponent(name)+'%20Location%3A%20'+encodeURIComponent(loc)+'" style="color:#16a34a;font-weight:700">💬 Send via WhatsApp</a><br>'+
+      '<a href="mailto:energies@mrsolargrid.com?subject=Solar%20Quote&body='+summary+'" style="color:#1d4ed8;font-weight:600">📧 Send via Email</a><br>'+
+      '<a href="tel:+255782435626" style="color:#1d4ed8;font-weight:600">📞 Call +255 782 435 626</a></div>';
+    btn.classList.remove('btn-loading');btn.disabled=false;
+  });
+  return false;
 }
 
-// ============= CONTACT FORM =============
-async function submitContact(e) {
+function submitContact(e){
   e.preventDefault();
-  const btn = document.getElementById('contact-submit');
-  const result = document.getElementById('contact-result');
-  const form = document.getElementById('contact-form');
-  btn.classList.add('btn-loading');
-  btn.disabled = true;
-  result.textContent = '';
-
-  const formData = new FormData(form);
-  const data = {};
-  formData.forEach((v, k) => { data[k] = v; });
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    const json = await res.json();
-    if (json.success) {
-      result.innerHTML = '<div style="color:#16a34a;font-weight:600">✓ Message sent! We\'ll reply within 24 hours.</div>';
+  var btn=document.getElementById('contact-submit');
+  var result=document.getElementById('contact-result');
+  var form=document.getElementById('contact-form');
+  btn.classList.add('btn-loading');btn.disabled=true;
+  var fd=new FormData(form);
+  var obj={};fd.forEach(function(v,k){if(k!=='botcheck')obj[k]=v;});
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify(obj)
+  }).then(function(r){return r.json();})
+  .then(function(d){
+    if(d.success){
+      result.innerHTML='<div style="color:#16a34a;font-weight:600">✓ Message sent! We\'ll reply within 24 hours.</div>';
       form.reset();
-    } else {
-      throw new Error(json.message || 'Submission failed');
-    }
-  } catch (err) {
-    const fields = Array.from(formData.entries()).filter(([k]) => !['access_key','subject','from_name','botcheck'].includes(k));
-    const body = fields.map(([k,v]) => `${k}: ${v}`).join('%0D%0A');
-    result.innerHTML = `<div style="color:#dc2626;line-height:1.5">Could not submit online. <a href="mailto:energies@mrsolargrid.com?subject=Website%20Contact&body=${body}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">Click to email us instead</a> or <a href="https://wa.me/255782435626" style="color:#16a34a;text-decoration:underline;font-weight:600">WhatsApp us</a>.</div>`;
-  }
-  btn.classList.remove('btn-loading');
-  btn.disabled = false;
+    }else{throw new Error(d.message||'Failed');}
+  }).catch(function(err){
+    result.innerHTML='<div style="color:#dc2626">Could not send. <a href="mailto:energies@mrsolargrid.com" style="color:#1d4ed8;text-decoration:underline">Email us</a> or <a href="https://wa.me/255782435626" style="color:#16a34a;text-decoration:underline">WhatsApp us</a>.</div>';
+  }).then(function(){btn.classList.remove('btn-loading');btn.disabled=false;});
+  return false;
 }
-
-showStep();
 </script>
 </body>
 </html>
