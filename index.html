@@ -871,11 +871,11 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       <div class="contact-grid-2">
         <div class="card" style="padding:2rem">
           <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem">Send Us a Message</h3>
-          <form id="contact-form" onsubmit="submitContact(event)">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitContact(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
             <input type="hidden" name="subject" value="New contact form submission - MrSolarGrid">
             <input type="hidden" name="from_name" value="MrSolarGrid Website">
-            <input type="checkbox" name="botcheck" style="display:none">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label">Name <span class="req">*</span></label>
@@ -954,11 +954,12 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           </div>
           <div class="step-label" id="step-label">Step 1 of 5 — Property Type</div>
 
-          <form id="quote-form" onsubmit="submitQuote(event)">
+          <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitQuote(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
             <input type="hidden" name="subject" value="New solar quote request - MrSolarGrid">
             <input type="hidden" name="from_name" value="MrSolarGrid Quote Form">
-            <input type="checkbox" name="botcheck" style="display:none">
+            <input type="hidden" name="redirect" value="false">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
             <!-- Step 1 -->
             <div class="quote-step active" data-step="1">
@@ -1600,147 +1601,7 @@ function quoteNext() {
   if (!validateStep(quoteStep)) return;
   if (quoteStep < totalSteps) {
     quoteStep++;
-    // ============= CALCULATOR =============
-// TANESCO tariff bands (TZS per kWh) — based on published TANESCO tariff structure
-// D1: Domestic low-usage (lifeline) — averaged for typical residential consumption
-// T1: General use (residential above lifeline + small commercial)
-// T2: Low-voltage industrial / large commercial
-// T3-MV: Medium-voltage industrial
-const CALC_CONSTANTS = {
-  TARIFF_PER_KWH: 292,        // TZS/kWh — TANESCO T1 (general residential/small commercial)
-  COMMERCIAL_TARIFF: 292,     // TZS/kWh — TANESCO T1 (commercial use)
-  INDUSTRIAL_TARIFF: 195,     // TZS/kWh — TANESCO T2 (low-voltage industrial)
-  SUN_HOURS_DAILY: 5.5,       // Average peak sun hours in Tanzania
-  COST_PER_KW_GRID: 2200000,  // TZS per kW for grid-tied system (no battery)
-  COST_PER_KW_HYBRID: 3200000,// TZS per kW for hybrid with essential battery backup
-  COST_PER_KW_FULL: 4500000,  // TZS per kW for full 24-hour battery backup
-  COST_PER_KW_OFFGRID: 5500000,// TZS per kW for full off-grid system
-  CO2_PER_KWH: 0.5,           // kg CO2 avoided per kWh (Tanzania grid mix)
-  SYSTEM_LIFE_YEARS: 25,
-  DEGRADATION: 0.005          // 0.5% per year output loss (industry standard)
-};
-
-function fmt(n) {
-  if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0','') + 'M';
-  if (n >= 1000) return Math.round(n / 1000) + 'K';
-  return Math.round(n).toString();
-}
-
-function updateCalc() {
-  const bill = parseInt(document.getElementById('calc-bill').value);
-  const type = document.getElementById('calc-type').value;
-  const backup = document.getElementById('calc-backup').value;
-  const outages = parseInt(document.getElementById('calc-outages').value);
-
-  document.getElementById('calc-bill-display').textContent = fmt(bill) + ' TZS';
-  document.getElementById('calc-outages-display').textContent = outages;
-
-  // Pick tariff
-  let tariff = CALC_CONSTANTS.TARIFF_PER_KWH;
-  if (type === 'commercial') tariff = CALC_CONSTANTS.COMMERCIAL_TARIFF;
-  if (type === 'industrial') tariff = CALC_CONSTANTS.INDUSTRIAL_TARIFF;
-
-  // Estimate monthly kWh consumption from bill
-  const monthlyKwh = bill / tariff;
-  const dailyKwh = monthlyKwh / 30;
-
-  // System size (kW) — accounting for 0.85 system efficiency
-  const systemSize = Math.max(1, dailyKwh / (CALC_CONSTANTS.SUN_HOURS_DAILY * 0.85));
-  const systemSizeRounded = Math.ceil(systemSize * 2) / 2; // round up to nearest 0.5kW
-
-  // Cost based on backup level
-  let costPerKw = CALC_CONSTANTS.COST_PER_KW_HYBRID;
-  if (backup === 'none') costPerKw = CALC_CONSTANTS.COST_PER_KW_GRID;
-  if (backup === 'full') costPerKw = CALC_CONSTANTS.COST_PER_KW_FULL;
-  if (backup === 'offgrid') costPerKw = CALC_CONSTANTS.COST_PER_KW_OFFGRID;
-
-  const systemCost = systemSizeRounded * costPerKw;
-
-  // Coverage % — how much of bill the system displaces
-  let coverage = 0.9; // typical hybrid covers 90%
-  if (backup === 'none') coverage = 0.7; // grid-tied with no battery, daytime only
-  if (backup === 'full') coverage = 0.95;
-  if (backup === 'offgrid') coverage = 1.0;
-
-  const monthlySavings = bill * coverage;
-  const annualSavings = monthlySavings * 12;
-  const paybackYears = systemCost / annualSavings;
-
-  // 25-year savings accounting for degradation
-  let lifetimeSavings = 0;
-  for (let y = 1; y <= CALC_CONSTANTS.SYSTEM_LIFE_YEARS; y++) {
-    lifetimeSavings += annualSavings * Math.pow(1 - CALC_CONSTANTS.DEGRADATION, y);
-  }
-  lifetimeSavings -= systemCost; // net savings
-
-  // Annual CO2 avoided
-  const annualKwh = monthlyKwh * 12 * coverage;
-  const co2Tonnes = (annualKwh * CALC_CONSTANTS.CO2_PER_KWH) / 1000;
-
-  // Update DOM
-  document.getElementById('calc-size').textContent = systemSizeRounded.toFixed(1) + ' kW';
-  document.getElementById('calc-cost').textContent = fmt(systemCost) + ' TZS';
-  document.getElementById('calc-monthly').textContent = fmt(monthlySavings) + ' TZS';
-  document.getElementById('calc-payback').textContent = paybackYears.toFixed(1) + ' years';
-  document.getElementById('calc-lifetime').textContent = fmt(Math.max(0, lifetimeSavings)) + ' TZS';
-  document.getElementById('calc-co2').textContent = co2Tonnes.toFixed(1) + ' tonnes';
-}
-
-function calcToQuote() {
-  // Navigate FIRST so the button always works, even if pre-fill fails
-  goto('quote');
-
-  // Then attempt to pre-fill quote form with calculator inputs (best-effort)
-  try {
-    const billRange = parseInt(document.getElementById('calc-bill').value);
-    const propertyType = document.getElementById('calc-type').value;
-    const backup = document.getElementById('calc-backup').value;
-
-    // Map calculator bill slider to quote form bill dropdown
-    const billSelect = document.getElementById('f-bill');
-    if (billSelect) {
-      let billOption = '';
-      if (billRange < 50000) billOption = 'Under 50,000 TZS';
-      else if (billRange < 150000) billOption = '50,000 - 150,000 TZS';
-      else if (billRange < 500000) billOption = '150,000 - 500,000 TZS';
-      else if (billRange < 1500000) billOption = '500,000 - 1,500,000 TZS';
-      else if (billRange < 5000000) billOption = '1,500,000 - 5,000,000 TZS';
-      else billOption = 'Over 5,000,000 TZS';
-      billSelect.value = billOption;
-    }
-
-    // Pre-select property type on Step 1
-    const propHidden = document.getElementById('f-property');
-    if (propHidden && propertyType) {
-      propHidden.value = propertyType;
-      document.querySelectorAll('.option-card').forEach(c => {
-        const oc = c.getAttribute('onclick') || '';
-        if (oc.includes(`'${propertyType}'`)) {
-          c.parentElement.querySelectorAll('.option-card').forEach(x => x.classList.remove('selected'));
-          c.classList.add('selected');
-        }
-      });
-    }
-
-    // Pre-select goal based on backup choice
-    const goalSelect = document.querySelector('select[name="goal"]');
-    if (goalSelect) {
-      if (backup === 'offgrid') goalSelect.value = 'Fully off-grid (no TANESCO)';
-      else if (backup === 'full' || backup === 'essential') goalSelect.value = 'Backup during outages';
-      else goalSelect.value = 'Cut my electricity bill';
-    }
-
-    // Refresh the navigation state on Step 1 so "Continue" enables
-    if (typeof updateQuoteNav === 'function') updateQuoteNav();
-  } catch (err) {
-    // Silent fail - button still navigated successfully
-    console.warn('Quote pre-fill skipped:', err);
-  }
-}
-
-updateCalc();
-
-showStep();
+    showStep();
   }
 }
 function quoteBack() {
@@ -1776,39 +1637,40 @@ document.querySelectorAll('#quote-form select, #quote-form input').forEach(el =>
 });
 
 async function submitQuote(e) {
+  // Prevent default to try JavaScript submission first
   e.preventDefault();
   const result = document.getElementById('quote-result');
   const btn = document.getElementById('btn-submit');
   const form = document.getElementById('quote-form');
+  const debugBox = document.getElementById('quote-debug');
 
-  // Basic validation on final step
   const nameVal = document.getElementById('f-name').value.trim();
   const phoneVal = document.getElementById('f-phone').value.trim();
   const locationVal = document.getElementById('f-location').value.trim();
   if (!nameVal || !phoneVal || !locationVal) {
     result.innerHTML = '<div style="color:#dc2626">Please fill in name, phone, and location.</div>';
-    return;
+    return false;
   }
 
   btn.classList.add('btn-loading');
   btn.disabled = true;
   result.innerHTML = '<div style="color:#6b7280">Sending your request...</div>';
 
-  // Clear botcheck (spam guard)
+  // Clear botcheck
   const botcheck = form.querySelector('[name="botcheck"]');
   if (botcheck) botcheck.checked = false;
 
-  // Build payload
+  // Build payload using FormData -> object pattern from Web3Forms docs
   const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  delete object.botcheck;
-  const jsonBody = JSON.stringify(object);
+  const object = {};
+  formData.forEach((value, key) => {
+    if (key !== 'botcheck') object[key] = value;
+  });
 
-  // Show what we're sending in the visible debug box
-  const debugBox = document.getElementById('quote-debug');
   if (debugBox) {
     debugBox.style.display = 'block';
-    debugBox.innerHTML = '<strong>SENDING:</strong><br>' + jsonBody.replace(/,/g, ',<br>');
+    debugBox.innerHTML = '<strong>SENDING TO WEB3FORMS:</strong><br>' +
+      JSON.stringify(object, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
   }
 
   try {
@@ -1818,50 +1680,49 @@ async function submitQuote(e) {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: jsonBody
+      body: JSON.stringify(object)
     });
 
-    let responseText = '';
-    let data = {};
-    try {
-      responseText = await response.text();
-      data = JSON.parse(responseText);
-    } catch(parseErr) {
-      data = { success: false, message: 'Invalid response: ' + responseText.substring(0, 200) };
-    }
+    let data;
+    const responseText = await response.text();
+    try { data = JSON.parse(responseText); }
+    catch { data = { success: false, message: responseText.substring(0, 300) }; }
 
-    // Show the actual response in the visible debug box
     if (debugBox) {
-      debugBox.innerHTML += '<br><br><strong>STATUS:</strong> ' + response.status +
-        '<br><strong>RESPONSE:</strong><br>' + JSON.stringify(data, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+      debugBox.innerHTML += '<br><br><strong>HTTP STATUS:</strong> ' + response.status +
+        '<br><strong>WEB3FORMS RESPONSE:</strong><br>' +
+        JSON.stringify(data, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
     }
 
-    if (response.status === 200 && data.success === true) {
+    if (response.ok && data.success === true) {
       document.getElementById('success-name').textContent = nameVal.split(' ')[0] || 'Friend';
       document.getElementById('success-phone').textContent = phoneVal;
       document.getElementById('quote-form-wrap').classList.add('hidden');
       document.getElementById('quote-success').classList.remove('hidden');
       window.scrollTo({top: 0, behavior: 'smooth'});
+      return false;
     } else {
-      throw new Error('Status ' + response.status + ': ' + (data.message || 'unknown error'));
+      throw new Error('Status ' + response.status + ': ' + (data.message || 'Web3Forms rejected the submission'));
     }
   } catch (err) {
     if (debugBox) {
       debugBox.innerHTML += '<br><br><strong style="color:#dc2626">ERROR:</strong> ' + err.message;
     }
+
     const summary = Object.entries(object)
-      .filter(([k,v]) => !['access_key','subject','from_name','botcheck'].includes(k) && v)
+      .filter(([k,v]) => !['access_key','subject','from_name'].includes(k) && v)
       .map(([k,v]) => `${k.replace(/_/g,' ')}: ${v}`)
       .join('%0D%0A');
+
     result.innerHTML = `<div style="color:#dc2626;line-height:1.6;text-align:left;background:#fef2f2;padding:1rem;border-radius:.5rem;border:1px solid #fca5a5;margin-top:1rem">
-      <strong>Submission failed:</strong> ${err.message}<br><br>
-      Please use one of these options:<br>
-      <a href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27d%20like%20a%20quote.%20My%20name%20is%20${encodeURIComponent(nameVal)}%20in%20${encodeURIComponent(locationVal)}." style="color:#16a34a;text-decoration:underline;font-weight:600">💬 WhatsApp us now</a><br>
-      <a href="mailto:energies@mrsolargrid.com?subject=Solar%20Quote%20Request&body=${summary}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📧 Email us</a><br>
+      <strong>Online submission failed.</strong> Your details are saved — please send them via:<br><br>
+      <a href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27d%20like%20a%20quote.%20My%20name%20is%20${encodeURIComponent(nameVal)}%20in%20${encodeURIComponent(locationVal)}.%20Phone%3A%20${encodeURIComponent(phoneVal)}" style="color:#16a34a;text-decoration:underline;font-weight:700;font-size:1rem">💬 Send via WhatsApp (recommended)</a><br><br>
+      <a href="mailto:energies@mrsolargrid.com?subject=Solar%20Quote%20Request%20-%20${encodeURIComponent(nameVal)}&body=${summary}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📧 Send via Email</a><br>
       <a href="tel:+255782435626" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📞 Call +255 782 435 626</a>
     </div>`;
     btn.classList.remove('btn-loading');
     btn.disabled = false;
+    return false;
   }
 }
 
