@@ -871,11 +871,11 @@ input,select,textarea{font-family:inherit;font-size:1rem}
       <div class="contact-grid-2">
         <div class="card" style="padding:2rem">
           <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem">Send Us a Message</h3>
-          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitContact(event)">
+          <form id="contact-form" onsubmit="submitContact(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
             <input type="hidden" name="subject" value="New contact form submission - MrSolarGrid">
             <input type="hidden" name="from_name" value="MrSolarGrid Website">
-            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label">Name <span class="req">*</span></label>
@@ -954,12 +954,11 @@ input,select,textarea{font-family:inherit;font-size:1rem}
           </div>
           <div class="step-label" id="step-label">Step 1 of 5 — Property Type</div>
 
-          <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitQuote(event)">
+          <form id="quote-form" onsubmit="submitQuote(event)">
             <input type="hidden" name="access_key" value="8c2d6991-700e-479e-ad95-77d0bcfb78dc">
             <input type="hidden" name="subject" value="New solar quote request - MrSolarGrid">
             <input type="hidden" name="from_name" value="MrSolarGrid Quote Form">
-            <input type="hidden" name="redirect" value="false">
-            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="checkbox" name="botcheck" style="display:none">
 
             <!-- Step 1 -->
             <div class="quote-step active" data-step="1">
@@ -1708,4 +1707,204 @@ function calcToQuote() {
       else if (billRange < 5000000) billOption = '1,500,000 - 5,000,000 TZS';
       else billOption = 'Over 5,000,000 TZS';
       billSelect.value = billOption;
-   
+    }
+
+    // Pre-select property type on Step 1
+    const propHidden = document.getElementById('f-property');
+    if (propHidden && propertyType) {
+      propHidden.value = propertyType;
+      document.querySelectorAll('.option-card').forEach(c => {
+        const oc = c.getAttribute('onclick') || '';
+        if (oc.includes(`'${propertyType}'`)) {
+          c.parentElement.querySelectorAll('.option-card').forEach(x => x.classList.remove('selected'));
+          c.classList.add('selected');
+        }
+      });
+    }
+
+    // Pre-select goal based on backup choice
+    const goalSelect = document.querySelector('select[name="goal"]');
+    if (goalSelect) {
+      if (backup === 'offgrid') goalSelect.value = 'Fully off-grid (no TANESCO)';
+      else if (backup === 'full' || backup === 'essential') goalSelect.value = 'Backup during outages';
+      else goalSelect.value = 'Cut my electricity bill';
+    }
+
+    // Refresh the navigation state on Step 1 so "Continue" enables
+    if (typeof updateQuoteNav === 'function') updateQuoteNav();
+  } catch (err) {
+    // Silent fail - button still navigated successfully
+    console.warn('Quote pre-fill skipped:', err);
+  }
+}
+
+updateCalc();
+
+showStep();
+  }
+}
+function quoteBack() {
+  if (quoteStep > 1) { quoteStep--; showStep(); }
+}
+function showStep() {
+  document.querySelectorAll('.quote-step').forEach(s => s.classList.toggle('active', parseInt(s.dataset.step) === quoteStep));
+  for (let i = 1; i <= totalSteps; i++) {
+    const dot = document.getElementById('step-dot-' + i);
+    dot.classList.remove('active','done');
+    if (i < quoteStep) dot.classList.add('done');
+    if (i === quoteStep) dot.classList.add('active');
+  }
+  document.getElementById('step-label').textContent = `Step ${quoteStep} of ${totalSteps} — ${stepNames[quoteStep-1]}`;
+  document.getElementById('btn-back').disabled = quoteStep === 1;
+  document.getElementById('btn-next').classList.toggle('hidden', quoteStep === totalSteps);
+  document.getElementById('btn-submit').classList.toggle('hidden', quoteStep !== totalSteps);
+  updateQuoteNav();
+}
+function validateStep(step) {
+  if (step === 1) return !!document.getElementById('f-property').value;
+  if (step === 2) return !!document.getElementById('f-roof-type').value;
+  if (step === 3) return !!document.getElementById('f-bill').value;
+  return true;
+}
+function updateQuoteNav() {
+  const ok = validateStep(quoteStep);
+  document.getElementById('btn-next').disabled = !ok;
+}
+document.querySelectorAll('#quote-form select, #quote-form input').forEach(el => {
+  el.addEventListener('change', updateQuoteNav);
+  el.addEventListener('input', updateQuoteNav);
+});
+
+async function submitQuote(e) {
+  e.preventDefault();
+  const result = document.getElementById('quote-result');
+  const btn = document.getElementById('btn-submit');
+  const form = document.getElementById('quote-form');
+
+  // Basic validation on final step
+  const nameVal = document.getElementById('f-name').value.trim();
+  const phoneVal = document.getElementById('f-phone').value.trim();
+  const locationVal = document.getElementById('f-location').value.trim();
+  if (!nameVal || !phoneVal || !locationVal) {
+    result.innerHTML = '<div style="color:#dc2626">Please fill in name, phone, and location.</div>';
+    return;
+  }
+
+  btn.classList.add('btn-loading');
+  btn.disabled = true;
+  result.innerHTML = '<div style="color:#6b7280">Sending your request...</div>';
+
+  // Clear botcheck (spam guard)
+  const botcheck = form.querySelector('[name="botcheck"]');
+  if (botcheck) botcheck.checked = false;
+
+  // Build payload
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  delete object.botcheck;
+  const jsonBody = JSON.stringify(object);
+
+  // Show what we're sending in the visible debug box
+  const debugBox = document.getElementById('quote-debug');
+  if (debugBox) {
+    debugBox.style.display = 'block';
+    debugBox.innerHTML = '<strong>SENDING:</strong><br>' + jsonBody.replace(/,/g, ',<br>');
+  }
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: jsonBody
+    });
+
+    let responseText = '';
+    let data = {};
+    try {
+      responseText = await response.text();
+      data = JSON.parse(responseText);
+    } catch(parseErr) {
+      data = { success: false, message: 'Invalid response: ' + responseText.substring(0, 200) };
+    }
+
+    // Show the actual response in the visible debug box
+    if (debugBox) {
+      debugBox.innerHTML += '<br><br><strong>STATUS:</strong> ' + response.status +
+        '<br><strong>RESPONSE:</strong><br>' + JSON.stringify(data, null, 2).replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+    }
+
+    if (response.status === 200 && data.success === true) {
+      document.getElementById('success-name').textContent = nameVal.split(' ')[0] || 'Friend';
+      document.getElementById('success-phone').textContent = phoneVal;
+      document.getElementById('quote-form-wrap').classList.add('hidden');
+      document.getElementById('quote-success').classList.remove('hidden');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    } else {
+      throw new Error('Status ' + response.status + ': ' + (data.message || 'unknown error'));
+    }
+  } catch (err) {
+    if (debugBox) {
+      debugBox.innerHTML += '<br><br><strong style="color:#dc2626">ERROR:</strong> ' + err.message;
+    }
+    const summary = Object.entries(object)
+      .filter(([k,v]) => !['access_key','subject','from_name','botcheck'].includes(k) && v)
+      .map(([k,v]) => `${k.replace(/_/g,' ')}: ${v}`)
+      .join('%0D%0A');
+    result.innerHTML = `<div style="color:#dc2626;line-height:1.6;text-align:left;background:#fef2f2;padding:1rem;border-radius:.5rem;border:1px solid #fca5a5;margin-top:1rem">
+      <strong>Submission failed:</strong> ${err.message}<br><br>
+      Please use one of these options:<br>
+      <a href="https://wa.me/255782435626?text=Hi%20MrSolarGrid%2C%20I%27d%20like%20a%20quote.%20My%20name%20is%20${encodeURIComponent(nameVal)}%20in%20${encodeURIComponent(locationVal)}." style="color:#16a34a;text-decoration:underline;font-weight:600">💬 WhatsApp us now</a><br>
+      <a href="mailto:energies@mrsolargrid.com?subject=Solar%20Quote%20Request&body=${summary}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📧 Email us</a><br>
+      <a href="tel:+255782435626" style="color:#1d4ed8;text-decoration:underline;font-weight:600">📞 Call +255 782 435 626</a>
+    </div>`;
+    btn.classList.remove('btn-loading');
+    btn.disabled = false;
+  }
+}
+
+// ============= CONTACT FORM =============
+async function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit');
+  const result = document.getElementById('contact-result');
+  const form = document.getElementById('contact-form');
+  btn.classList.add('btn-loading');
+  btn.disabled = true;
+  result.textContent = '';
+
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((v, k) => { data[k] = v; });
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+    if (json.success) {
+      result.innerHTML = '<div style="color:#16a34a;font-weight:600">✓ Message sent! We\'ll reply within 24 hours.</div>';
+      form.reset();
+    } else {
+      throw new Error(json.message || 'Submission failed');
+    }
+  } catch (err) {
+    const fields = Array.from(formData.entries()).filter(([k]) => !['access_key','subject','from_name','botcheck'].includes(k));
+    const body = fields.map(([k,v]) => `${k}: ${v}`).join('%0D%0A');
+    result.innerHTML = `<div style="color:#dc2626;line-height:1.5">Could not submit online. <a href="mailto:energies@mrsolargrid.com?subject=Website%20Contact&body=${body}" style="color:#1d4ed8;text-decoration:underline;font-weight:600">Click to email us instead</a> or <a href="https://wa.me/255782435626" style="color:#16a34a;text-decoration:underline;font-weight:600">WhatsApp us</a>.</div>`;
+  }
+  btn.classList.remove('btn-loading');
+  btn.disabled = false;
+}
+
+showStep();
+</script>
+</body>
+</html>
